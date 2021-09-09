@@ -33,12 +33,8 @@ class UserController extends Controller
 
         try
         {
-            /**
-             * Create a new User $user
-             */
-            $user = User::create($request);
-
-            print_r($user->count());
+            /* Create a new User $user */
+            $user = User::create($request->all());
 
             /* Check user count */
             if ($user->count() == 1)
