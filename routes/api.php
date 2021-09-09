@@ -1,7 +1,7 @@
 <?php
-
+    
+use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\UserController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +18,18 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('v1/')->group(function () {
     Route::post('register', [UserController::class, 'register']);
     Route::post('login', [UserController::class, 'login']);
+    
+    Route::prefix('categories')->group(function () {
+        Route::get('/', [CategoryController::class, 'index']);
+        Route::get('/{id}', [CategoryController::class, 'show']);
+    });
 });
 
-Route::middleware('auth:sanctum')->group(function () {
-
+Route::middleware('auth:sanctum')->prefix('v1/')->group(function () {
+    Route::prefix('categories')->group(function () {
+        Route::get('deleted/data', [CategoryController::class, 'deleted']);
+        Route::post('/', [CategoryController::class, 'store']);
+        Route::put('/{id}', [CategoryController::class, 'update']);
+        Route::delete('/{id}', [CategoryController::class, 'destroy']);
+    });
 });
