@@ -3,40 +3,85 @@
 namespace {{ namespace }};
 
 use {{ rootNamespace }}Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 
 class {{ class }} extends Controller
 {
+    protected $successStatus = 200;
+    protected $createdStatus = 201;
+    protected $requestFailed = 404;
+    protected $responseFailed = 500;
+    protected $forbiddenStatus = 403;
+
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
-    public function index()
+    public function index(): JsonResponse
     {
-        //
+        try
+        {
+
+        }
+        catch(Exception $ex)
+        {
+            /* Return failure response*/
+            return response()->json([
+              'data'      => [],
+              'count'     => 0,
+              'success'   => false,
+              'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
+            ], $this->responseFailed);
+        }
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
-    public function store(Request $request)
+    public function store(Request $request): JsonResponse
     {
-        //
+        try
+        {
+
+        }
+        catch(Exception $ex)
+        {
+            /* Return failure response*/
+            return response()->json([
+              'data'      => [],
+              'count'     => 0,
+              'success'   => false,
+              'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
+            ], $this->responseFailed);
+        }
     }
 
     /**
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
-    public function show($id)
+    public function show($id): JsonResponse
     {
-        //
+        try
+        {
+
+        }
+        catch(Exception $ex)
+        {
+            /* Return failure response*/
+            return response()->json([
+              'data'      => [],
+              'count'     => 0,
+              'success'   => false,
+              'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
+            ], $this->responseFailed);
+        }
     }
 
     /**
@@ -44,21 +89,70 @@ class {{ class }} extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id): JsonResponse
     {
-        //
+        try
+        {
+
+        }
+        catch(Exception $ex)
+        {
+            /* Return failure response*/
+            return response()->json([
+              'data'      => [],
+              'count'     => 0,
+              'success'   => false,
+              'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
+            ], $this->responseFailed);
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
-    public function destroy($id)
+    public function destroy($id): JsonResponse
     {
-        //
+        try
+        {
+
+        }
+        catch(Exception $ex)
+        {
+            /* Return failure response*/
+            return response()->json([
+              'data'      => [],
+              'count'     => 0,
+              'success'   => false,
+              'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
+            ], $this->responseFailed);
+        }
+    }
+
+    /**
+     * Retrieve soft deleted resources.
+     *
+     * @return JsonResponse
+     */
+    public function deleted(): JsonResponse
+    {
+        try
+        {
+
+        }
+        catch(Exception $ex)
+        {
+            /* Return failure response*/
+            return response()->json([
+              'data'      => [],
+              'count'     => 0,
+              'success'   => false,
+              'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
+            ], $this->responseFailed);
+        }
     }
 }

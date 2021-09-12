@@ -1,12 +1,14 @@
 <?php
 
-namespace {{ namespace }};
+namespace App\Http\Controllers\Api;
 
-use {{ namespacedModel }};
-use {{ rootNamespace }}Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\OptionRequest;
+use App\Models\Option;
+use Exception;
 use Illuminate\Http\JsonResponse;
 
-class {{ class }} extends Controller
+class OptionController extends Controller
 {
     protected $successStatus = 200;
     protected $createdStatus = 201;
@@ -23,7 +25,14 @@ class {{ class }} extends Controller
     {
         try
         {
-
+            $options = Option::paginate(50);
+            
+            /* Return successful response */
+            return response()->json([
+                'data'      => $options,
+                'success'   => true,
+                'msg'       => 'Options were retrieved'
+            ], $this->successStatus);
         }
         catch(Exception $ex)
         {
@@ -36,18 +45,25 @@ class {{ class }} extends Controller
             ], $this->responseFailed);
         }
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  OptionRequest  $request
+     *
      * @return JsonResponse
      */
-    public function store(Request $request): JsonResponse
+    public function store(OptionRequest $request): JsonResponse
     {
         try
         {
-
+            $option = Option::create($request->validated());
+    
+            return response()->json([
+              'data' => $option,
+              'success' => true,
+              'msg' => 'Option was stored'
+            ], $this->successStatus);
         }
         catch(Exception $ex)
         {
@@ -71,7 +87,13 @@ class {{ class }} extends Controller
     {
         try
         {
-
+            $option = Option::findOrFail($id);
+    
+            return response()->json([
+              'data' => $option,
+              'success' => true,
+              'msg' => 'Option was retrieved'
+            ], $this->successStatus);
         }
         catch(Exception $ex)
         {
@@ -84,19 +106,31 @@ class {{ class }} extends Controller
             ], $this->responseFailed);
         }
     }
-
+    
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  OptionRequest  $request
      * @param  int  $id
+     *
      * @return JsonResponse
      */
-    public function update(Request $request, $id): JsonResponse
+    public function update(OptionRequest $request, $id): JsonResponse
     {
         try
         {
-
+            $option = Option::findOrFail($id);
+            
+            if ($option)
+            {
+                $option->update($request->validated());
+    
+                return response()->json([
+                  'data' => $option,
+                  'success' => true,
+                  'msg' => 'Option was updated'
+                ], $this->successStatus);
+            }
         }
         catch(Exception $ex)
         {
@@ -120,7 +154,18 @@ class {{ class }} extends Controller
     {
         try
         {
-
+            $option = Option::findOrFail($id);
+            
+            if ($option)
+            {
+                $option->delete();
+    
+                return response()->json([
+                  'data' => $option,
+                  'success' => true,
+                  'msg' => 'Option was destroyed'
+                ], $this->successStatus);
+            }
         }
         catch(Exception $ex)
         {
@@ -143,7 +188,13 @@ class {{ class }} extends Controller
     {
         try
         {
-
+            $options = Option::withTrashed()->paginate(50);
+    
+            return response()->json([
+              'data' => $options,
+              'success' => true,
+              'msg' => 'Options with deleted data were retrieved'
+            ], $this->successStatus);
         }
         catch(Exception $ex)
         {
