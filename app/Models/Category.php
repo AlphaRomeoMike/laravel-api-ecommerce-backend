@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -30,6 +31,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|Category withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Category withoutTrashed()
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\SubCategory[] $subcategory
+ * @property-read int|null $subcategory_count
  */
 class Category extends Model
 {
@@ -45,5 +48,15 @@ class Category extends Model
     public function subcategory(): HasMany
     {
         return $this->hasMany(SubCategory::class);
+    }
+    
+    /**
+     * Relationship between Category and Product
+     *
+     * @return BelongsToMany Category::class
+     */
+    public function categories(): BelongsToMany
+    {
+        return $this->belongsToMany(Product::class, 'category_product');
     }
 }

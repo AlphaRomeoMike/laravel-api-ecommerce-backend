@@ -15905,7 +15905,7 @@
                         return $instance->configure($config);
         }
                     /**
-         * Initiates an Image instance from different input types
+         * Initiates an Picture instance from different input types
          *
          * @param mixed $data
          * @return \Intervention\Image\Image 
