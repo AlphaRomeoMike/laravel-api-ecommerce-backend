@@ -37,7 +37,7 @@ class UserController extends Controller
             $user = User::create($request->all());
 
             /* Check user count */
-            if ($user->count() == 1)
+            if ($user)
             {
                 /* Grant a token to user */
                 $token = $user->createToken('auth-token')->plainTextToken;
@@ -88,18 +88,18 @@ class UserController extends Controller
         {
             /* Find the user from credentials*/
             $user = User::where('email', $request['credentials'])->orWhere('name', $request['credentials'])->first();
-    
+
             /* Check if the user exists*/
             if ($user)
             {
                 /* Validate the password */
                 $passwordValidation = Hash::check($request['password'], $user->password);
-                
+
                 if ($passwordValidation)
                 {
                     /* Grant user the token */
                     $token = $user->createToken('auth-token')->plainTextToken;
-            
+
                     /* Return successful response*/
                     return response()->json([
                       'data'      => $user,

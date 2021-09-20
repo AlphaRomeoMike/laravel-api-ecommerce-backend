@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\OptionRequest;
+use App\Http\Resources\OptionResource;
 use App\Models\Option;
 use Exception;
 use Illuminate\Http\JsonResponse;
@@ -25,8 +26,8 @@ class OptionController extends Controller
     {
         try
         {
-            $options = Option::paginate(50);
-            
+            $options = OptionResource::collection(Option::paginate(50));
+
             /* Return successful response */
             return response()->json([
                 'data'      => $options,
@@ -45,7 +46,7 @@ class OptionController extends Controller
             ], $this->responseFailed);
         }
     }
-    
+
     /**
      * Store a newly created resource in storage.
      *
@@ -58,7 +59,7 @@ class OptionController extends Controller
         try
         {
             $option = Option::create($request->validated());
-    
+
             return response()->json([
               'data' => $option,
               'success' => true,
@@ -80,15 +81,15 @@ class OptionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return JsonResponse
      */
-    public function show($id): JsonResponse
+    public function show(int $id): JsonResponse
     {
         try
         {
-            $option = Option::findOrFail($id);
-    
+            $option = OptionResource::make(Option::findOrFail($id));
+
             return response()->json([
               'data' => $option,
               'success' => true,
@@ -106,7 +107,7 @@ class OptionController extends Controller
             ], $this->responseFailed);
         }
     }
-    
+
     /**
      * Update the specified resource in storage.
      *
@@ -120,11 +121,11 @@ class OptionController extends Controller
         try
         {
             $option = Option::findOrFail($id);
-            
+
             if ($option)
             {
                 $option->update($request->validated());
-    
+
                 return response()->json([
                   'data' => $option,
                   'success' => true,
@@ -155,11 +156,11 @@ class OptionController extends Controller
         try
         {
             $option = Option::findOrFail($id);
-            
+
             if ($option)
             {
                 $option->delete();
-    
+
                 return response()->json([
                   'data' => $option,
                   'success' => true,
@@ -188,8 +189,8 @@ class OptionController extends Controller
     {
         try
         {
-            $options = Option::withTrashed()->paginate(50);
-    
+            $options = OptionResource::collection(Option::withTrashed()->paginate(50));
+
             return response()->json([
               'data' => $options,
               'success' => true,
