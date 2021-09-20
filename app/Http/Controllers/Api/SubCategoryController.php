@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SubCategoryRequest;
+use App\Http\Resources\SubCategoryResource;
 use App\Models\SubCategory;
 use Exception;
 use GrahamCampbell\ResultType\Success;
@@ -26,11 +27,12 @@ class SubCategoryController extends Controller
     {
         try
         {
-            $subcategory = SubCategory::with('category')->paginate(50);
+            $subcategory = SubCategoryResource::collection(SubCategory::with('category')->paginate(50));
     
             return response()->json([
               'data' => $subcategory,
               'success' => true,
+              'count'   => $subcategory->count(),
               'msg' => 'Subcategories were retrieved'
             ], $this->successStatus);
         }
@@ -41,7 +43,7 @@ class SubCategoryController extends Controller
               'data'      => [],
               'count'     => 0,
               'success'   => false,
-              'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
+              'msg'       => $ex->getMessage() . ' on ' . $ex->getLine() . 'in' . $ex->getFile()
             ], $this->responseFailed);
         }
     }
