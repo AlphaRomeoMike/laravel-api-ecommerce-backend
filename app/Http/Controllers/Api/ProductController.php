@@ -73,9 +73,9 @@ class ProductController extends Controller
             $responseArray['product'] = $product;
             
             /** process the images */
-            if($request->has('images'))
+            if($request->hasFile('images'))
             {
-                $images = $request->get('images');
+                $images = $request->images;
                 
                 $count = 0;
                 
@@ -83,13 +83,13 @@ class ProductController extends Controller
                 foreach ($images as $image)
                 {
                     /** @var  $filename */
-                    $filename = $product->id . '-' . rand(111111, 999999) . '-' . time();
+                    $filename = $product->id . '-' . rand(111111, 999999) . '-' . time() . '.' . $image->getClientOriginalExtension();
                     
                     /** @var $image_resized, resize the image from real path */
                     $image_resized = Image::make($image->getRealPath())->resize(500, 500);
                     
                     /** @var $image_resized, save to public path */
-                    $image_resized->save(public_path('product/' . $filename));
+                    $image_resized->save(public_path() . 'product/' . $filename);
                     
                     /** @var $picture, create a new instance of picture */
                     $picture = new Picture();
@@ -104,14 +104,30 @@ class ProductController extends Controller
             /** Process the categories */
             if ($request->has('categories'))
             {
-                $count = 0;
                 $categories = $request->get('categories');
                 
                 foreach ($categories as $category)
                 {
-                
+                    $product->categories()->attach($category);
                 }
             }
+            
+            /** Process the subcategories */
+            if ($request->has('subcategories'))
+            {
+                $subcategories = $request->get('subcategories');
+                
+                foreach ($subcategories as $subcategory)
+                {
+                    $product->subcategories()->attach($subcategory);
+                }
+            }
+    
+            return response()->json([
+              'data' => $responseArray,
+              'success' => true,
+              'msg' => 'Product was created'
+            ], $this->createdStatus);
         }
         catch(Exception $ex)
         {
@@ -120,7 +136,8 @@ class ProductController extends Controller
               'data'      => [],
               'count'     => 0,
               'success'   => false,
-              'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
+              'file'      => $ex->getFile(),
+              'msg'       => $ex->getMessage() . ' on ' . $ex->getLine(),
             ], $this->responseFailed);
         }
     }
@@ -131,7 +148,7 @@ class ProductController extends Controller
      * @param  int  $id
      * @return JsonResponse
      */
-    public function show($id): JsonResponse
+    public function show(int $id): JsonResponse
     {
         try
         {

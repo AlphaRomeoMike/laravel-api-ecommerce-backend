@@ -56,7 +56,9 @@ class Product extends Model
         'name',
         'weight',
         'description',
-        'stock'
+        'stock',
+        'status',
+        'price'
     ];
     
     /**
