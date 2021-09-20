@@ -33,23 +33,27 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @mixin \Eloquent
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\SubCategory[] $subcategory
  * @property-read int|null $subcategory_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Product[] $categories
+ * @property-read int|null $categories_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\SubCategory[] $subcategories
+ * @property-read int|null $subcategories_count
  */
 class Category extends Model
 {
     use HasFactory, SoftDeletes;
-    
+
     protected $fillable = ['name', 'status'];
-    
+
     /**
      * Relationship between SubCategory to Category
      *
      * @return HasMany SubCategory::class
      */
-    public function subcategory(): HasMany
+    public function subcategories(): HasMany
     {
         return $this->hasMany(SubCategory::class);
     }
-    
+
     /**
      * Relationship between Category and Product
      *

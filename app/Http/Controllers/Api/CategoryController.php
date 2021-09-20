@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryRequest;
+use App\Http\Resources\CategoryResource;
 use App\Models\Category;
 use Exception;
 use Illuminate\Http\JsonResponse;
@@ -15,7 +16,7 @@ class CategoryController extends Controller
     protected $requestFailed = 404;
     protected $responseFailed = 500;
     protected $forbiddenStatus = 403;
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -26,8 +27,8 @@ class CategoryController extends Controller
         try
         {
             /* Return all data paginated */
-            $categories = Category::paginate(20);
-    
+            $categories = CategoryResource::collection(Category::paginate(20));
+
             /* Return successful response */
             return response()->json([
                 'data'          => $categories,
@@ -47,7 +48,7 @@ class CategoryController extends Controller
             ], $this->responseFailed);
         }
     }
-    
+
     /**
      * Store a newly created resource in storage.
      *
@@ -60,7 +61,7 @@ class CategoryController extends Controller
         try
         {
             $category = Category::create($request->input());
-            
+
             return response()->json([
                 'category'      => $category,
                 'count'         => 1,
@@ -91,7 +92,7 @@ class CategoryController extends Controller
         try
         {
             $category = Category::find($id);
-    
+
             /* Return successful response */
             return response()->json([
               'data'          => $category,
@@ -111,7 +112,7 @@ class CategoryController extends Controller
             ], $this->responseFailed);
         }
     }
-    
+
     /**
      * Update the specified resource in storage.
      *
@@ -125,11 +126,11 @@ class CategoryController extends Controller
         try
         {
             $category = Category::find($id);
-            
+
             if ($category)
             {
                 $category->update($request->validated());
-    
+
                 /* Return successful response */
                 return response()->json([
                   'data'          => $category,
@@ -167,11 +168,11 @@ class CategoryController extends Controller
         try
         {
             $category = Category::find($id);
-            
+
             if($category)
             {
                 $category->delete();
-    
+
                 /* Return successful response */
                 return response()->json([
                   'data'          => $category,
@@ -196,7 +197,7 @@ class CategoryController extends Controller
             ], $this->responseFailed);
         }
     }
-    
+
     /**
      * Retrieve soft deleted resources.
      *
@@ -207,7 +208,7 @@ class CategoryController extends Controller
         try
         {
             $categories = Category::withTrashed()->paginate(20);
-    
+
             /* Return successful response */
             return response()->json([
               'data'          => $categories,
@@ -227,4 +228,21 @@ class CategoryController extends Controller
             ], $this->responseFailed);
         }
     }
+
+    /**
+     * Find subcategories with categories
+     *
+     * @api v1/categories/subcategories/data
+     * @return JsonResponse
+     */
+	public function subcategories() : JsonResponse
+	{
+			$subcategories = CategoryResource::collection(Category::with('subcategories')->get());
+
+			return response()->json([
+				'data'      => $subcategories,
+				'success'   => true,
+				'msg'       => 'Subcategories were retrieved'
+			]);
+	}
 }
