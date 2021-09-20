@@ -30,6 +30,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|Picture withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Picture withoutTrashed()
  * @mixin \Eloquent
+ * @property string $picture
+ * @method static \Illuminate\Database\Eloquent\Builder|Picture wherePicture($value)
  */
 class Picture extends Model
 {
