@@ -17,8 +17,8 @@
 		public function run()
 		{
 			\App\Models\User::factory(10)->create();
-			Category::factory(10)->create();
-			Option::factory(100)->create();
+			Category::factory(30)->create();
+			Option::factory(30)->create();
 			SubCategory::factory(30)->create();
 		}
 	}

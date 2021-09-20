@@ -91,7 +91,7 @@ class CategoryController extends Controller
     {
         try
         {
-            $category = Category::find($id);
+            $category = CategoryResource::make(Category::find($id));
 
             /* Return successful response */
             return response()->json([
