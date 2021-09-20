@@ -15,7 +15,7 @@ class CreatePicturesTable extends Migration
     {
         Schema::create('pictures', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->references('id')->on('products')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('product_id')->references('id')->on('product')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('picture', 100);
             $table->timestamps();
             $table->softDeletes();

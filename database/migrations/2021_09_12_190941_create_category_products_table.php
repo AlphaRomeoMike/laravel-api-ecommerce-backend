@@ -16,7 +16,7 @@ class CreateCategoryProductsTable extends Migration
         Schema::create('category_product', function (Blueprint $table) {
             $table->id();
             $table->foreignId('category_id')->references('id')->on('categories')->cascadeOnUpdate()->cascadeOnDelete();
-            $table->foreignId('product_id')->references('id')->on('products')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignId('product_id')->references('id')->on('product')->cascadeOnUpdate()->cascadeOnDelete();
             $table->softDeletes();
         });
     }
