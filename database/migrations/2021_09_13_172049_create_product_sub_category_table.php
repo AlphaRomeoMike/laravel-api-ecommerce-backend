@@ -15,7 +15,7 @@ class CreateProductSubCategoryTable extends Migration
     {
         Schema::create('product_sub_category', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->references('id')->on('products')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('product_id')->references('id')->on('product')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('sub_category_id')->references('id')->on('sub_categories')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
             $table->softDeletes();

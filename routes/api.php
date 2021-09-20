@@ -1,5 +1,5 @@
 <?php
-
+ 
 	use App\Http\Controllers\Api\CategoryController;
 	use App\Http\Controllers\Api\OptionController;
 	use App\Http\Controllers\Api\SubCategoryController;
@@ -16,7 +16,7 @@
 	| is assigned the "api" middleware group. Enjoy building your API!
 	|
 	*/
-
+ 
 	Route::prefix('v1/')->group(function () {
 		Route::post('register', [UserController::class, 'register']);
 		Route::post('login', [UserController::class, 'login']);
