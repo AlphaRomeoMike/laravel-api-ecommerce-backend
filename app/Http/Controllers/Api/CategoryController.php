@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Exceptions\Api\CategoryNotFoundException;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryRequest;
 use App\Http\Resources\CategoryResource;
@@ -53,7 +54,6 @@ class CategoryController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  CategoryRequest  $request
-     *
      * @return JsonResponse
      */
     public function store(CategoryRequest $request)
@@ -113,89 +113,63 @@ class CategoryController extends Controller
         }
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  CategoryRequest  $request
-     * @param  int  $id
-     *
-     * @return JsonResponse
-     */
+	/**
+	 * Update the specified resource in storage.
+	 *
+	 * @param CategoryRequest $request
+	 * @param int $id
+	 * @return JsonResponse
+	 * @throws CategoryNotFoundException
+	 */
     public function update(CategoryRequest $request, int $id): JsonResponse
     {
-        try
-        {
-            $category = Category::find($id);
+         $category = Category::find($id);
 
-            if ($category)
-            {
-                $category->update($request->validated());
+         if ($category)
+         {
+             $category->update($request->validated());
 
-                /* Return successful response */
-                return response()->json([
-                  'data'          => $category,
-                  'count'         => 1,
-                  'success'       => true,
-                  'msg'           => 'Category updated'
-                ], $this->successStatus);
-            }
-            else
-            {
-                abort(404, 'Category not found');
-            }
-        }
-        catch (Exception $ex)
-        {
-            /* Return failure response*/
-            return response()->json([
-              'data'      => [],
-              'count'     => 0,
-              'success'   => false,
-              'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
-            ], $this->responseFailed);
-        }
+             /* Return successful response */
+             return response()->json([
+               'data'          => $category,
+               'count'         => 1,
+               'success'       => true,
+               'msg'           => 'Category updated'
+             ], $this->successStatus);
+         }
+         else
+         {
+            throw new CategoryNotFoundException(null , 404);
+         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     *
-     * @return JsonResponse
-     */
-    public function destroy($id)
+	/**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param int $id
+	 * @return JsonResponse
+	 * @throws CategoryNotFoundException
+	 */
+    public function destroy(int $id): JsonResponse
     {
-        try
-        {
-            $category = Category::find($id);
+	      $category = Category::find($id);
 
-            if($category)
-            {
-                $category->delete();
+	      if($category)
+	      {
+	          $category->delete();
 
-                /* Return successful response */
-                return response()->json([
-                  'data'          => $category,
-                  'count'         => 1,
-                  'success'       => true,
-                  'msg'           => 'Category deleted'
-                ], $this->successStatus);
-            }
-            else
-            {
-                abort(404, 'Category not deleted');
-            }
-        }
-        catch (Exception $ex)
-        {
-            /* Return failure response*/
-            return response()->json([
-              'data'      => [],
-              'count'     => 0,
-              'success'   => false,
-              'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
-            ], $this->responseFailed);
-        }
+	          /* Return successful response */
+	          return response()->json([
+	            'data'          => $category,
+	            'count'         => 1,
+	            'success'       => true,
+	            'msg'           => 'Category deleted'
+	          ], $this->successStatus);
+	      }
+	      else
+	      {
+	          throw new CategoryNotFoundException(null , 404);
+	      }
     }
 
     /**
