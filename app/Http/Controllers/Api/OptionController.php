@@ -26,7 +26,7 @@ class OptionController extends Controller
     {
         try
         {
-            $options = OptionResource::collection(Option::paginate(50));
+            $options = Option::paginate(50);
 
             /* Return successful response */
             return response()->json([
@@ -88,7 +88,7 @@ class OptionController extends Controller
     {
         try
         {
-            $option = OptionResource::make(Option::findOrFail($id));
+            $option = Option::findOrFail($id);
 
             return response()->json([
               'data' => $option,
@@ -189,7 +189,7 @@ class OptionController extends Controller
     {
         try
         {
-            $options = OptionResource::collection(Option::withTrashed()->paginate(50));
+            $options = Option::withTrashed()->paginate(50);
 
             return response()->json([
               'data' => $options,
