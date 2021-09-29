@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api;
 use App\Exceptions\Api\CategoryNotFoundException;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryRequest;
-use App\Http\Resources\CategoryResource;
 use App\Models\Category;
 use Exception;
 use Illuminate\Http\JsonResponse;
@@ -28,7 +27,7 @@ class CategoryController extends Controller
         try
         {
             /* Return all data paginated */
-            $categories = CategoryResource::collection(Category::paginate(20));
+            $categories = Category::paginate(20);
 
             /* Return successful response */
             return response()->json([
@@ -91,7 +90,7 @@ class CategoryController extends Controller
     {
         try
         {
-            $category = CategoryResource::make(Category::find($id));
+            $category = Category::find($id);
 
             /* Return successful response */
             return response()->json([
@@ -119,7 +118,7 @@ class CategoryController extends Controller
 	 * @param CategoryRequest $request
 	 * @param int $id
 	 * @return JsonResponse
-	 * @throws CategoryNotFoundException
+	 * @throws Exception
 	 */
     public function update(CategoryRequest $request, int $id): JsonResponse
     {
@@ -139,7 +138,7 @@ class CategoryController extends Controller
          }
          else
          {
-            throw new CategoryNotFoundException(null , 404);
+            throw new Exception( 'Category not found!' , 404);
          }
     }
 
@@ -148,7 +147,7 @@ class CategoryController extends Controller
 	 *
 	 * @param int $id
 	 * @return JsonResponse
-	 * @throws CategoryNotFoundException
+	 * @throws Exception
 	 */
     public function destroy(int $id): JsonResponse
     {
@@ -168,7 +167,7 @@ class CategoryController extends Controller
 	      }
 	      else
 	      {
-	          throw new CategoryNotFoundException(null , 404);
+	          throw new Exception('Category not found' , 404);
 	      }
     }
 
@@ -211,7 +210,7 @@ class CategoryController extends Controller
      */
 	public function subcategories() : JsonResponse
 	{
-			$subcategories = CategoryResource::collection(Category::with('subcategories')->get());
+			$subcategories = Category::with('subcategories')->get();
 
 			return response()->json([
 				'data'      => $subcategories,

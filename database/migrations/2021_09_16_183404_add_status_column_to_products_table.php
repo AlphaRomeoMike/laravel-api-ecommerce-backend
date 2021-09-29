@@ -13,7 +13,7 @@ class AddStatusColumnToProductsTable extends Migration
      */
     public function up()
     {
-        Schema::table('product', function (Blueprint $table) {
+        Schema::table('products', function (Blueprint $table) {
             $table->string('name')->after('id');
             $table->boolean('status')->after('unit')->default(1);
             $table->text('description')->after('status');
@@ -27,7 +27,7 @@ class AddStatusColumnToProductsTable extends Migration
      */
     public function down()
     {
-        Schema::table('product', function (Blueprint $table) {
+        Schema::table('products', function (Blueprint $table) {
             $table->dropColumn('name');
             $table->dropColumn('description');
             $table->dropColumn('status');
