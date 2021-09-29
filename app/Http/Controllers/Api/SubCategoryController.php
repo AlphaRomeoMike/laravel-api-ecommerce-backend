@@ -4,10 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SubCategoryRequest;
-use App\Http\Resources\SubCategoryResource;
 use App\Models\SubCategory;
 use Exception;
-use GrahamCampbell\ResultType\Success;
 use Illuminate\Http\JsonResponse;
 
 class SubCategoryController extends Controller

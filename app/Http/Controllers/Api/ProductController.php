@@ -60,7 +60,6 @@ class ProductController extends Controller
     {
         try
         {
-            $responseArray = array();
             /** @var $data, get validated data only */
             $data = $request->validated();
             
@@ -70,14 +69,10 @@ class ProductController extends Controller
             /** @var $product, create a product */
             $product = Product::create($data);
             
-            $responseArray['product'] = $product;
-            
             /** process the images */
             if($request->hasFile('images'))
             {
                 $images = $request->images;
-                
-                $count = 0;
                 
                 /** @var $image, iterated over the images array */
                 foreach ($images as $image)
@@ -89,15 +84,13 @@ class ProductController extends Controller
                     $image_resized = Image::make($image->getRealPath())->resize(500, 500);
                     
                     /** @var $image_resized, save to public path */
-                    $image_resized->save(public_path() . 'product/' . $filename);
+                    $image_resized->save(public_path() . '/storage/product/' . $filename);
                     
                     /** @var $picture, create a new instance of picture */
                     $picture = new Picture();
                     $picture->product_id = $product->id;
                     $picture->picture = $filename;
                     $picture->save();
-                    
-                    $responseArray['pictures'][$count++] = $picture;
                 }
             }
             
@@ -105,6 +98,8 @@ class ProductController extends Controller
             if ($request->has('categories'))
             {
                 $categories = $request->get('categories');
+                
+                $count = 1;
                 
                 foreach ($categories as $category)
                 {
@@ -122,11 +117,14 @@ class ProductController extends Controller
                     $product->subcategories()->attach($subcategory);
                 }
             }
+            
+            $responseArray = Product::with('categories', 'subcategories', 'pictures')->find($product->id);
     
             return response()->json([
-              'data' => $responseArray,
+              'data'    => $responseArray,
               'success' => true,
-              'msg' => 'Product was created'
+              'count'   => 1,
+              'msg'     => 'Product was created'
             ], $this->createdStatus);
         }
         catch(Exception $ex)
@@ -152,7 +150,14 @@ class ProductController extends Controller
     {
         try
         {
-
+            $product = Product::with('categories', 'subcategories', 'pictures')->findOrFail($id);
+    
+            return response()->json([
+              'data'    => $product,
+              'success' => true,
+              'count'   => 1,
+              'msg'     => 'Product was retrieved'
+            ], $this->successStatus);
         }
         catch(Exception $ex)
         {
@@ -169,15 +174,27 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param ProductRequest  $request
      * @param  int  $id
      * @return JsonResponse
      */
-    public function update(Request $request, $id): JsonResponse
+    public function update(ProductRequest $request, int $id): JsonResponse
     {
         try
         {
-
+            $product = Product::findOrFail($id);
+            
+            if ($product)
+            {
+                $product->update($request->validated());
+    
+                return response()->json([
+                  'data'    => $product,
+                  'success' => true,
+                  'count'   => 1,
+                  'msg' => 'Product was updated'
+                ], $this->successStatus);
+            }
         }
         catch(Exception $ex)
         {
@@ -194,14 +211,25 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return JsonResponse
      */
-    public function destroy($id): JsonResponse
+    public function destroy(int $id): JsonResponse
     {
         try
         {
-
+            $product = Product::findOrFail($id);
+            
+            if ($id)
+            {
+                $product->delete();
+                
+                return response()->json([
+                  'data'    => [],
+                  'success' => true,
+                  'msg'     => 'Product was destroyed'
+                ], $this->successStatus);
+            }
         }
         catch(Exception $ex)
         {
@@ -224,7 +252,13 @@ class ProductController extends Controller
     {
         try
         {
-
+            $products = Product::onlyTrashed();
+    
+            return response()->json([
+              'data' => $products,
+              'success' => true,
+              'msg' => 'Deleted products were retrieved'
+            ], $this->successStatus);
         }
         catch(Exception $ex)
         {
