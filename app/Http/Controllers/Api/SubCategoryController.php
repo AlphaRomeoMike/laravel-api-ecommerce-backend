@@ -27,12 +27,11 @@ class SubCategoryController extends Controller
     {
         try
         {
-            $subcategory = SubCategoryResource::collection(SubCategory::with('category')->paginate(50));
+            $subcategory = SubCategory::with('category')->paginate(50);
     
             return response()->json([
               'data' => $subcategory,
               'success' => true,
-              'count'   => $subcategory->count(),
               'msg' => 'Subcategories were retrieved'
             ], $this->successStatus);
         }
