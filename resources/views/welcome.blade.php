@@ -1,3 +1,7 @@
+{{--@dd(is_dir(base_path() . '/public/storage'))--}}
+{{--        @php--}}
+{{--        symlink(base_path() . '/storage/app/public', base_path() . '/public/storage')--}}
+{{--        @endphp--}}
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>

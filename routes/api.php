@@ -4,6 +4,7 @@
     use App\Http\Controllers\Api\OptionController;
     use App\Http\Controllers\Api\ProductController;
     use App\Http\Controllers\Api\SubCategoryController;
+    use App\Http\Controllers\Api\TagController;
     use App\Http\Controllers\Api\UserController;
     use Illuminate\Support\Facades\Route;
     
@@ -66,6 +67,12 @@
             Route::get('/', [SubCategoryController::class, 'index']);
             Route::get('/{id}', [SubCategoryController::class, 'show']);
         });
+    
+        /**
+         * @link 'localhost:8000/api/v1/tags'
+         * Tags Routes - No Middleware
+         */
+        Route::apiResource('tags', TagController::class)->only(['index', 'show']);
     });
     
     Route::middleware('auth:sanctum')->prefix('v1/')->group(function () {
@@ -129,4 +136,7 @@
             /* @api GET */
             Route::get('/deleted/data', [ProductController::class, 'deleted'])->name('deleted');
         });
+    
+        /* @link 'localhost:8000/api/v1/tags' */
+        Route::apiResource('tags', TagController::class)->except(['index', 'show']);
     });
