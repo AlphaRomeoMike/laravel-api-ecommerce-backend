@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\Tags\HasTags;
 
 /**
  * App\Models\Product
@@ -46,10 +47,22 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property-read int|null $pictures_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Category[] $subcategories
  * @property-read int|null $subcategories_count
+ * @property string $name
+ * @property int $status
+ * @property string $description
+ * @property \Illuminate\Database\Eloquent\Collection|\Spatie\Tags\Tag[] $tags
+ * @property-read int|null $tags_count
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product withAllTags($tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product withAllTagsOfAnyType($tags)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product withAnyTags($tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product withAnyTagsOfAnyType($tags)
  */
 class Product extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes, HasTags;
     
     protected $fillable = [
         'sku',

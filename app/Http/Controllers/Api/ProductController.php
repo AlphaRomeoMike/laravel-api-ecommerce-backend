@@ -63,13 +63,22 @@ class ProductController extends Controller
             /** @var $data, get validated data only */
             $data = $request->validated();
             
-            /** append a unique sku to the validated data */
+            /* append a unique sku to the validated data */
             $data['sku'] = Str::slug($data['name']). '-' . time() . '-' . rand(111111, 9999999);
             
             /** @var $product, create a product */
             $product = Product::create($data);
             
-            /** process the images */
+            /* Create tags if the request has tags array */
+            if($request->has('tags'))
+            {
+                if(!empty($request->input('tags')))
+                {
+                    $product->attachTags($request->input('tags'));
+                }
+            }
+            
+            /* process the images */
             if($request->hasFile('images'))
             {
                 $images = $request->images;
@@ -84,7 +93,7 @@ class ProductController extends Controller
                     $image_resized = Image::make($image->getRealPath())->resize(500, 500);
                     
                     /** @var $image_resized, save to public path */
-                    $image_resized->save(public_path() . '/storage/product/' . $filename);
+                    $image_resized->save(public_path() . '/product/' . $filename);
                     
                     /** @var $picture, create a new instance of picture */
                     $picture = new Picture();
@@ -136,6 +145,7 @@ class ProductController extends Controller
               'success'   => false,
               'file'      => $ex->getFile(),
               'msg'       => $ex->getMessage() . ' on ' . $ex->getLine(),
+              'stack'     => $ex->getTraceAsString()
             ], $this->responseFailed);
         }
     }
