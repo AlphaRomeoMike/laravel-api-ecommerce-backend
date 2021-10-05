@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\OptionRequest;
-use App\Http\Resources\OptionResource;
-use App\Models\Option;
 use Exception;
+use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\OrderRequest;
+use App\Models\Order;
 
-class OptionController extends Controller
+class OrderController extends Controller
 {
     protected $successStatus = 200;
     protected $createdStatus = 201;
@@ -26,14 +26,13 @@ class OptionController extends Controller
     {
         try
         {
-            $options = Option::paginate(50);
+            $orders = Order::paginate();
 
-            /* Return successful response */
             return response()->json([
-                'data'      => $options,
+                'orders'    => $orders,
                 'success'   => true,
-                'msg'       => 'Options were retrieved'
-            ], $this->successStatus);
+                'msg'       => 'All orders were retrieved'
+            ], 200);
         }
         catch(Exception $ex)
         {
@@ -49,21 +48,14 @@ class OptionController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  OptionRequest  $request
-     *
+     * @param  OrderRequest  $request
      * @return JsonResponse
      */
-    public function store(OptionRequest $request): JsonResponse
+    public function store(OrderRequest $request): JsonResponse
     {
         try
         {
-            $option = Option::create($request->validated());
-
-            return response()->json([
-              'data' => $option,
-              'success' => true,
-              'msg' => 'Option was stored'
-            ], $this->successStatus);
+            
         }
         catch(Exception $ex)
         {
@@ -79,20 +71,14 @@ class OptionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param int $id
+     * @param  int  $id
      * @return JsonResponse
      */
-    public function show(int $id): JsonResponse
+    public function show($id): JsonResponse
     {
         try
         {
-            $option = Option::findOrFail($id);
 
-            return response()->json([
-              'data' => $option,
-              'success' => true,
-              'msg' => 'Option was retrieved'
-            ], $this->successStatus);
         }
         catch(Exception $ex)
         {
@@ -108,27 +94,15 @@ class OptionController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  OptionRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     *
      * @return JsonResponse
      */
-    public function update(OptionRequest $request, $id): JsonResponse
+    public function update(Request $request, $id): JsonResponse
     {
         try
         {
-            $option = Option::findOrFail($id);
 
-            if ($option)
-            {
-                $option->update($request->validated());
-
-                return response()->json([
-                  'data' => $option,
-                  'success' => true,
-                  'msg' => 'Option was updated'
-                ], $this->successStatus);
-            }
         }
         catch(Exception $ex)
         {
@@ -147,22 +121,11 @@ class OptionController extends Controller
      * @param  int  $id
      * @return JsonResponse
      */
-    public function destroy(int $id): JsonResponse
+    public function destroy($id): JsonResponse
     {
         try
         {
-            $option = Option::findOrFail($id);
 
-            if ($option)
-            {
-                $option->delete();
-
-                return response()->json([
-                  'data' => $option,
-                  'success' => true,
-                  'msg' => 'Option was destroyed'
-                ], $this->successStatus);
-            }
         }
         catch(Exception $ex)
         {
@@ -184,13 +147,7 @@ class OptionController extends Controller
     {
         try
         {
-            $options = Option::withTrashed()->paginate(50);
 
-            return response()->json([
-              'data' => $options,
-              'success' => true,
-              'msg' => 'Options with deleted data were retrieved'
-            ], $this->successStatus);
         }
         catch(Exception $ex)
         {
