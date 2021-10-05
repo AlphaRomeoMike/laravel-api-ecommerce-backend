@@ -1,1 +1,1851 @@
-{"_type":"export","__export_format":4,"__export_date":"2021-10-05T22:30:56.063Z","__export_source":"insomnia.desktop.app:v2021.5.3","resources":[{"_id":"req_1db52ff9f87346a691c345026776995f","parentId":"fld_65296ae2bb274faf8d80ee2ef325d74a","modified":1633123132773,"created":1631215364812,"url":"{{ _.base_url }}options","name":"Options Create","description":"","method":"POST","body":{"mimeType":"application/x-www-form-urlencoded","params":[{"id":"pair_b8dfd7cd71654bd48c56abc1335ecb41","name":"name","value":"Sample Option","description":""},{"id":"pair_992a2ad16023400998c9b251148a4656","name":"status","value":"1","description":""}]},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""},{"id":"pair_cfee583975564aaa831810277851e347","name":"Content-Type","value":"application/x-www-form-urlencoded","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795280,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_65296ae2bb274faf8d80ee2ef325d74a","parentId":"wrk_4d066a9fda7a4adfb08f04647b1d4ad4","modified":1631215321608,"created":1631215321608,"name":"Options","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1631215321608,"_type":"request_group"},{"_id":"wrk_4d066a9fda7a4adfb08f04647b1d4ad4","parentId":null,"modified":1631195145661,"created":1631195117855,"name":"Laravel Ecommerce API","description":"","scope":"collection","_type":"workspace"},{"_id":"req_c80be42015454b7e807681d8939fb547","parentId":"fld_65296ae2bb274faf8d80ee2ef325d74a","modified":1633123145780,"created":1631215350878,"url":"{{ _.base_url }}options/11","name":"Options Edit","description":"","method":"PUT","body":{"mimeType":"application/x-www-form-urlencoded","params":[{"id":"pair_b8dfd7cd71654bd48c56abc1335ecb41","name":"name","value":"Wilca","description":""},{"id":"pair_992a2ad16023400998c9b251148a4656","name":"status","value":"1","description":""}]},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""},{"id":"pair_cfee583975564aaa831810277851e347","name":"Content-Type","value":"application/x-www-form-urlencoded","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795230,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_96b6cd689a3c4726bdc53181f4350bdb","parentId":"fld_65296ae2bb274faf8d80ee2ef325d74a","modified":1633123151336,"created":1631215430479,"url":"{{ _.base_url }}options/3","name":"Options Single","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{},"metaSortKey":-1631203795217.5,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_f917b93283244e518be1f97f572b6c54","parentId":"fld_65296ae2bb274faf8d80ee2ef325d74a","modified":1633123161518,"created":1631215445718,"url":"{{ _.base_url }}options","name":"Options Listing","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{},"metaSortKey":-1631203795205,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_5248654856fc471a83a47fd8b09c4e63","parentId":"fld_65296ae2bb274faf8d80ee2ef325d74a","modified":1633123168056,"created":1631215494104,"url":"{{ _.base_url }}options/101","name":"Options Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795105,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_1ded4e95ffa143ada7bbf6c67c95dd58","parentId":"fld_65296ae2bb274faf8d80ee2ef325d74a","modified":1633123111769,"created":1631215481764,"url":"{{ _.base_url }}option","name":"Options Deleted","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795055,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_669759ef05a8446e91d834f505b4b77a","parentId":"fld_ab441e0e3f7846bbb2daa7edb6d4da6d","modified":1633123186107,"created":1631212190687,"url":"{{ _.base_url }}categories/11","name":"Categories Edit","description":"","method":"PUT","body":{"mimeType":"application/x-www-form-urlencoded","params":[{"id":"pair_b8dfd7cd71654bd48c56abc1335ecb41","name":"name","value":"Wilca","description":""},{"id":"pair_992a2ad16023400998c9b251148a4656","name":"status","value":"1","description":""}]},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""},{"id":"pair_cfee583975564aaa831810277851e347","name":"Content-Type","value":"application/x-www-form-urlencoded","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795255,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_ab441e0e3f7846bbb2daa7edb6d4da6d","parentId":"wrk_4d066a9fda7a4adfb08f04647b1d4ad4","modified":1631212415999,"created":1631212415999,"name":"Categories","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1631212415999,"_type":"request_group"},{"_id":"req_462c5218963d4ddcbab74bb06fa696f9","parentId":"fld_ab441e0e3f7846bbb2daa7edb6d4da6d","modified":1633123193298,"created":1631212042834,"url":"{{ _.base_url }}categories","name":"Categories Create","description":"","method":"POST","body":{"mimeType":"application/x-www-form-urlencoded","params":[{"id":"pair_b8dfd7cd71654bd48c56abc1335ecb41","name":"name","value":"Wilco","description":""},{"id":"pair_992a2ad16023400998c9b251148a4656","name":"status","value":"1","description":""}]},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""},{"id":"pair_cfee583975564aaa831810277851e347","name":"Content-Type","value":"application/x-www-form-urlencoded","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795205,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_5f321bf22a9c476dab3fb42d25eee7be","parentId":"fld_ab441e0e3f7846bbb2daa7edb6d4da6d","modified":1633123201763,"created":1631212000227,"url":"{{ _.base_url }}categories/subcategories/data","name":"Categories Single","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{},"metaSortKey":-1631203795155,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_199d316f38b149378004d2769b419175","parentId":"fld_ab441e0e3f7846bbb2daa7edb6d4da6d","modified":1633123209115,"created":1631212466663,"url":"{{ _.base_url }}categories/deleted/data","name":"Categories Deleted","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795130,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_aa5bab6d1c4a4c98bc33fbb46b223cff","parentId":"fld_ab441e0e3f7846bbb2daa7edb6d4da6d","modified":1633123214516,"created":1631208866949,"url":"{{ _.base_url }}categories","name":"Categories Listing","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{},"metaSortKey":-1631203795105,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_914635b40bb242c5a6193a9b6dcdd559","parentId":"fld_ab441e0e3f7846bbb2daa7edb6d4da6d","modified":1633123237558,"created":1631212346121,"url":"{{ _.base_url }}categories/1","name":"Categories Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795055,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_25c8e194fed74eecbbc51ead8eca5a55","parentId":"fld_5e572e30ba1d4f21a6c1188c5ccb3e51","modified":1633123261407,"created":1631469731580,"url":"{{ _.base_url }}subcategories/","name":"SubCategories Create","description":"","method":"POST","body":{"mimeType":"application/x-www-form-urlencoded","params":[{"id":"pair_b8dfd7cd71654bd48c56abc1335ecb41","name":"name","value":"Sample Subcategory","description":""},{"id":"pair_992a2ad16023400998c9b251148a4656","name":"status","value":"1","description":""},{"id":"pair_9c2c8a3068f84ceaa5a5989d02fa6616","name":"category_id","value":"13","description":""}]},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""},{"id":"pair_cfee583975564aaa831810277851e347","name":"Content-Type","value":"application/x-www-form-urlencoded","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795280,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_5e572e30ba1d4f21a6c1188c5ccb3e51","parentId":"wrk_4d066a9fda7a4adfb08f04647b1d4ad4","modified":1631469745795,"created":1631469731573,"name":"SubCategories","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1631203795055,"_type":"request_group"},{"_id":"req_daa41f4fe86045cbad4cbcc5f78fdfb1","parentId":"fld_5e572e30ba1d4f21a6c1188c5ccb3e51","modified":1633123269794,"created":1631469731577,"url":"{{ _.base_url }}subcategories/11","name":"SubCategories  Edit","description":"","method":"PUT","body":{"mimeType":"application/x-www-form-urlencoded","params":[{"id":"pair_b8dfd7cd71654bd48c56abc1335ecb41","name":"name","value":"Wilca","description":""},{"id":"pair_992a2ad16023400998c9b251148a4656","name":"status","value":"1","description":""}]},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""},{"id":"pair_cfee583975564aaa831810277851e347","name":"Content-Type","value":"application/x-www-form-urlencoded","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795230,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_29bb57785bd9497e933b4376fb21ff2a","parentId":"fld_5e572e30ba1d4f21a6c1188c5ccb3e51","modified":1633123275416,"created":1631469731583,"url":"{{ _.base_url }}subcategories/10","name":"SubCategories  Single","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{},"metaSortKey":-1631203795217.5,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_9b67b65372a942a28a1a33ce741029f0","parentId":"fld_5e572e30ba1d4f21a6c1188c5ccb3e51","modified":1633123283007,"created":1631469731587,"url":"{{ _.base_url }}subcategories","name":"SubCategories  Listing","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{},"metaSortKey":-1631203795205,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_9d83415714d2407db72e15383f43dc44","parentId":"fld_5e572e30ba1d4f21a6c1188c5ccb3e51","modified":1633123288456,"created":1631469731595,"url":"{{ _.base_url }}subcategories/101","name":"SubCategories Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795105,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_67d172807908495aa551f2bf9b511706","parentId":"fld_5e572e30ba1d4f21a6c1188c5ccb3e51","modified":1633123300160,"created":1631469731593,"url":"{{ _.base_url }}subcategories/deleted/data?page=3","name":"SubCategories Deleted","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795055,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_08e0565e6c7f454c98ff04d9f4f1c40e","parentId":"fld_c8cf5fa038af4e238b59e38c5471b89b","modified":1633471178413,"created":1631816884787,"url":"{{ _.base_url }}products/","name":"Products Create","description":"","method":"POST","body":{"mimeType":"multipart/form-data","params":[{"id":"pair_b8dfd7cd71654bd48c56abc1335ecb41","name":"name","value":"Sample Product 3","description":""},{"id":"pair_9c2c8a3068f84ceaa5a5989d02fa6616","name":"price","value":"300","description":""},{"id":"pair_992a2ad16023400998c9b251148a4656","name":"weight","value":"1.1","description":""},{"id":"pair_a24bfc9ac53143cc88326c756179b12d","name":"unit","value":"4","description":""},{"id":"pair_c1d6399e0ac443d4b6cd9aadb4e6647c","name":"description","value":"This is a sample product 3","description":""},{"id":"pair_3f92a21323264699bfbfacc51106c2cf","name":"stock","value":"133","description":""},{"id":"pair_30e4dbdb748641a6889c2199ce789aa5","name":"images[]","value":"","description":"","type":"file","fileName":"C:\\Users\\ARM\\Pictures\\Ecommerce API Data\\T-shirt\\t1.png","disabled":false},{"id":"pair_64913b55e81041d6a7fcd42f4a30eeab","name":"images[]","value":"","description":"","type":"file","fileName":"C:\\Users\\ARM\\Pictures\\Ecommerce API Data\\T-shirt\\t2.png"},{"id":"pair_5f4c816c6478452a9901445ad244bd40","name":"images[]","value":"","description":"","type":"file","fileName":"C:\\Users\\ARM\\Pictures\\Ecommerce API Data\\T-shirt\\t3.png"},{"id":"pair_6ce5bda230f344dca29b666c23ee2cea","name":"categories[]","value":"1","description":""},{"id":"pair_e295769e88e84c9f9bfa0fc62f0c95b1","name":"categories[]","value":"3","description":""},{"id":"pair_da4fbd3633ed44a5a92cd81809b2893f","name":"categories[]","value":"8","description":""},{"id":"pair_8e57ec365a0c449db7d05bea24d16b80","name":"subcategories[]","value":"3","description":""},{"id":"pair_316a4adc60e645218a41b4c3ed9a1647","name":"subcategories[]","value":"7","description":""},{"id":"pair_a71ec7712e5f47ea9dc8e1cd2b0f95ee","name":"status","value":"1","description":""},{"id":"pair_925cee6098bc487f82dc6bdbd48537d6","name":"tags[]","value":"Tshirts","description":""},{"id":"pair_83c87fea68b549688a1d848a7ec1ff30","name":"tags[]","value":"men","description":""}]},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""},{"id":"pair_cfee583975564aaa831810277851e347","name":"Content-Type","value":"multipart/form-data","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795280,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_c8cf5fa038af4e238b59e38c5471b89b","parentId":"wrk_4d066a9fda7a4adfb08f04647b1d4ad4","modified":1632944405907,"created":1631816884762,"name":"Products","description":"","environment":{},"environmentPropertyOrder":{},"metaSortKey":-1631203795005,"_type":"request_group"},{"_id":"req_4c9a54cab18c425e9a79b0639898a201","parentId":"fld_c8cf5fa038af4e238b59e38c5471b89b","modified":1633123367974,"created":1631816884775,"url":"{{ _.base_url }}products/11","name":"Products Edit","description":"","method":"PUT","body":{"mimeType":"application/x-www-form-urlencoded","params":[{"id":"pair_b8dfd7cd71654bd48c56abc1335ecb41","name":"name","value":"Wilca","description":""},{"id":"pair_992a2ad16023400998c9b251148a4656","name":"status","value":"1","description":""}]},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""},{"id":"pair_cfee583975564aaa831810277851e347","name":"Content-Type","value":"application/x-www-form-urlencoded","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795230,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_6d35f9930c1940cd83c5c7ca2f60ab9f","parentId":"fld_c8cf5fa038af4e238b59e38c5471b89b","modified":1633123351663,"created":1631816884795,"url":"{{ _.base_url }}products/1","name":"Products Single","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{},"metaSortKey":-1631203795217.5,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_cfd8cbdd612846139dfa8d3beae13262","parentId":"fld_c8cf5fa038af4e238b59e38c5471b89b","modified":1633128412340,"created":1631816884805,"url":"{{ _.base_url }}products","name":"Products Listing","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{},"metaSortKey":-1631203795205,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_f05012315da3496cacd72d2e7654d386","parentId":"fld_c8cf5fa038af4e238b59e38c5471b89b","modified":1633470547762,"created":1631816884818,"url":"{{ _.base_url }}products/1","name":"Products Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795105,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_33799024782244ae8f301e278bf52402","parentId":"fld_c8cf5fa038af4e238b59e38c5471b89b","modified":1633123422094,"created":1631816884811,"url":"{{ _.base_url }}products/deleted/data","name":"Products Deleted","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795055,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_23b0fd6d5c314c3ea3fcb3e15fb77997","parentId":"fld_5f245fcf46604686ac3d26a9ee9754cb","modified":1633472856149,"created":1633472808098,"url":"{{ _.base_url }}orders/","name":"Order Create","description":"","method":"POST","body":{"mimeType":"multipart/form-data","params":[{"id":"pair_b8dfd7cd71654bd48c56abc1335ecb41","name":"name","value":"Sample Product 3","description":""},{"id":"pair_9c2c8a3068f84ceaa5a5989d02fa6616","name":"price","value":"300","description":""},{"id":"pair_992a2ad16023400998c9b251148a4656","name":"weight","value":"1.1","description":""},{"id":"pair_a24bfc9ac53143cc88326c756179b12d","name":"unit","value":"4","description":""},{"id":"pair_c1d6399e0ac443d4b6cd9aadb4e6647c","name":"description","value":"This is a sample product 3","description":""},{"id":"pair_3f92a21323264699bfbfacc51106c2cf","name":"stock","value":"133","description":""},{"id":"pair_30e4dbdb748641a6889c2199ce789aa5","name":"images[]","value":"","description":"","type":"file","fileName":"C:\\Users\\ARM\\Pictures\\Ecommerce API Data\\T-shirt\\t1.png","disabled":false},{"id":"pair_64913b55e81041d6a7fcd42f4a30eeab","name":"images[]","value":"","description":"","type":"file","fileName":"C:\\Users\\ARM\\Pictures\\Ecommerce API Data\\T-shirt\\t2.png"},{"id":"pair_5f4c816c6478452a9901445ad244bd40","name":"images[]","value":"","description":"","type":"file","fileName":"C:\\Users\\ARM\\Pictures\\Ecommerce API Data\\T-shirt\\t3.png"},{"id":"pair_6ce5bda230f344dca29b666c23ee2cea","name":"categories[]","value":"1","description":""},{"id":"pair_e295769e88e84c9f9bfa0fc62f0c95b1","name":"categories[]","value":"3","description":""},{"id":"pair_da4fbd3633ed44a5a92cd81809b2893f","name":"categories[]","value":"8","description":""},{"id":"pair_8e57ec365a0c449db7d05bea24d16b80","name":"subcategories[]","value":"3","description":""},{"id":"pair_316a4adc60e645218a41b4c3ed9a1647","name":"subcategories[]","value":"7","description":""},{"id":"pair_a71ec7712e5f47ea9dc8e1cd2b0f95ee","name":"status","value":"1","description":""},{"id":"pair_925cee6098bc487f82dc6bdbd48537d6","name":"tags[]","value":"Tshirts","description":""},{"id":"pair_83c87fea68b549688a1d848a7ec1ff30","name":"tags[]","value":"men","description":""}]},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""},{"id":"pair_cfee583975564aaa831810277851e347","name":"Content-Type","value":"multipart/form-data","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795280,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_5f245fcf46604686ac3d26a9ee9754cb","parentId":"wrk_4d066a9fda7a4adfb08f04647b1d4ad4","modified":1633472808092,"created":1633472808092,"name":"Orders","description":"","environment":{},"environmentPropertyOrder":{},"metaSortKey":-1631203794980,"_type":"request_group"},{"_id":"req_007356c13d824270b4afaa351900899c","parentId":"fld_5f245fcf46604686ac3d26a9ee9754cb","modified":1633472943257,"created":1633472808095,"url":"{{ _.base_url }}orders/11","name":"Order Edit","description":"","method":"PUT","body":{"mimeType":"application/x-www-form-urlencoded","params":[{"id":"pair_b8dfd7cd71654bd48c56abc1335ecb41","name":"name","value":"Wilca","description":""},{"id":"pair_992a2ad16023400998c9b251148a4656","name":"status","value":"1","description":""}]},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""},{"id":"pair_cfee583975564aaa831810277851e347","name":"Content-Type","value":"application/x-www-form-urlencoded","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795230,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_c7445cfc774846f0b72191f306e64369","parentId":"fld_5f245fcf46604686ac3d26a9ee9754cb","modified":1633472946734,"created":1633472808101,"url":"{{ _.base_url }}orders/1","name":"Orders Single","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{},"metaSortKey":-1631203795217.5,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_e9f32e21d1c540a3a8d67e3b97c5c3c3","parentId":"fld_5f245fcf46604686ac3d26a9ee9754cb","modified":1633472950582,"created":1633472808103,"url":"{{ _.base_url }}orders","name":"Orders Listing","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{},"metaSortKey":-1631203795205,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_58e8b9226d4347f7a0149ae2b3337a19","parentId":"fld_5f245fcf46604686ac3d26a9ee9754cb","modified":1633472955489,"created":1633472808107,"url":"{{ _.base_url }}orders/1","name":"Orders Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795105,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_61b7ff66e2894a959229b02f6293a57e","parentId":"fld_5f245fcf46604686ac3d26a9ee9754cb","modified":1633472959410,"created":1633472808105,"url":"{{ _.base_url }}orders/deleted/data","name":"Orders Deleted","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795055,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_9a0b4c3afd13457ba04c92ecf10106a3","parentId":"fld_2b720d2415da4d71a522eb4d28c54a9c","modified":1633470581909,"created":1633126419863,"url":"{{ _.base_url }}tags","name":"Tags Create","description":"","method":"POST","body":{"mimeType":"multipart/form-data","params":[{"id":"pair_b8dfd7cd71654bd48c56abc1335ecb41","name":"name","value":"tshirts","description":""}]},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""},{"id":"pair_cfee583975564aaa831810277851e347","name":"Content-Type","value":"multipart/form-data","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795280,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_2b720d2415da4d71a522eb4d28c54a9c","parentId":"wrk_4d066a9fda7a4adfb08f04647b1d4ad4","modified":1633126419853,"created":1633126419853,"name":"Tags","description":"","environment":{},"environmentPropertyOrder":{},"metaSortKey":-1631203794955,"_type":"request_group"},{"_id":"req_c84460cc89c448f1ae6e9d350144fe95","parentId":"fld_2b720d2415da4d71a522eb4d28c54a9c","modified":1633127478503,"created":1633126419858,"url":"{{ _.base_url }}tags/13","name":"Tags Edit","description":"","method":"PUT","body":{"mimeType":"application/x-www-form-urlencoded","params":[{"id":"pair_b8dfd7cd71654bd48c56abc1335ecb41","name":"name","value":"Gaming","description":""}]},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""},{"id":"pair_cfee583975564aaa831810277851e347","name":"Content-Type","value":"application/x-www-form-urlencoded","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795230,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_c0e2b37826584699aaf3b31d3a654e33","parentId":"fld_2b720d2415da4d71a522eb4d28c54a9c","modified":1633127606108,"created":1633126419865,"url":"{{ _.base_url }}tags/2","name":"Tags Single","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{},"metaSortKey":-1631203795217.5,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_917fc6217d764d31846d90e74462cbc7","parentId":"fld_2b720d2415da4d71a522eb4d28c54a9c","modified":1633126673645,"created":1633126419867,"url":"{{ _.base_url }}tags","name":"Tags Listing","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{},"metaSortKey":-1631203795205,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_89b1a424cc75428ba7886319453cd23c","parentId":"fld_2b720d2415da4d71a522eb4d28c54a9c","modified":1633126687007,"created":1633126419872,"url":"{{ _.base_url }}tags/1","name":"Tags Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""}],"authentication":{"type":"bearer","token":"{{ _.bearer }}"},"metaSortKey":-1631203795105,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_eb746228983445dfb0104a81e983a538","parentId":"wrk_4d066a9fda7a4adfb08f04647b1d4ad4","modified":1633122553222,"created":1631198527082,"url":"http://localhost/api/v1/register","name":"Register","description":"","method":"POST","body":{"mimeType":"application/x-www-form-urlencoded","params":[{"id":"pair_b8dfd7cd71654bd48c56abc1335ecb41","name":"name","value":"Admin","description":""},{"id":"pair_064dca0faa664437bab09da55a0b7786","name":"email","value":"user@emaple.com","description":""},{"id":"pair_b1fb1c551f294d06b8b74c5c8d4196df","name":"password","value":"password124","description":"","disabled":false},{"id":"pair_c6dec0538f2e400e8011388caf26e51d","name":"password_confirmation","value":"password124","description":""},{"id":"pair_992a2ad16023400998c9b251148a4656","name":"admin","value":"1","description":""}]},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""},{"id":"pair_cfee583975564aaa831810277851e347","name":"Content-Type","value":"application/x-www-form-urlencoded","description":""}],"authentication":{},"metaSortKey":-1631195174111,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_777b6f1d15a04ab387b04215cdbc2327","parentId":"wrk_4d066a9fda7a4adfb08f04647b1d4ad4","modified":1633122881841,"created":1631195411020,"url":"{{ _.base_url }}login","name":"Login","description":"","method":"POST","body":{"mimeType":"application/x-www-form-urlencoded","params":[{"id":"pair_b8dfd7cd71654bd48c56abc1335ecb41","name":"credentials","value":"Admin","description":""},{"id":"pair_064dca0faa664437bab09da55a0b7786","name":"email","value":"rafaymodi@gmail.com","description":"","disabled":true},{"id":"pair_b1fb1c551f294d06b8b74c5c8d4196df","name":"password","value":"password","description":"","disabled":false},{"id":"pair_c6dec0538f2e400e8011388caf26e51d","name":"password_confirmation","value":"testuser","description":"","disabled":true},{"id":"pair_992a2ad16023400998c9b251148a4656","name":"","value":"","description":""}]},"parameters":[],"headers":[{"id":"pair_ed14b9cd01da431fbdee6c95a7f24b14","name":"Accept","value":"application/json","description":""},{"id":"pair_cfee583975564aaa831810277851e347","name":"Content-Type","value":"application/x-www-form-urlencoded","description":""}],"authentication":{},"metaSortKey":-1631195174061,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"env_3125f669c0ebc0aea8b3cd9c6d32d18009e59187","parentId":"wrk_4d066a9fda7a4adfb08f04647b1d4ad4","modified":1633470608559,"created":1631195117864,"name":"Base Environment","data":{"scheme":"http","base_url":"{{ _.scheme }}://{{ _.domain }}{{ _.api_version }}","domain":"localhost/","api_version":"api/v1/","bearer":"2|b3NEES88haCJzfCe6aJz283rODdGBVGN6zLyVIDQ"},"dataPropertyOrder":{"&":["scheme","base_url","domain","api_version","bearer"]},"color":null,"isPrivate":false,"metaSortKey":1631195117864,"_type":"environment"},{"_id":"jar_3125f669c0ebc0aea8b3cd9c6d32d18009e59187","parentId":"wrk_4d066a9fda7a4adfb08f04647b1d4ad4","modified":1631195117873,"created":1631195117873,"name":"Default Jar","cookies":[],"_type":"cookie_jar"},{"_id":"spc_948947b8dde54124b696f4aa0836e49e","parentId":"wrk_4d066a9fda7a4adfb08f04647b1d4ad4","modified":1631195117857,"created":1631195117857,"fileName":"Authentication and Authorization","contents":"","contentType":"yaml","_type":"api_spec"}]}
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-10-05T22:30:56.063Z",
+  "__export_source": "insomnia.desktop.app:v2021.5.3",
+  "resources": [
+    {
+      "_id": "req_1db52ff9f87346a691c345026776995f",
+      "parentId": "fld_65296ae2bb274faf8d80ee2ef325d74a",
+      "modified": 1633123132773,
+      "created": 1631215364812,
+      "url": "{{ _.base_url }}options",
+      "name": "Options Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/x-www-form-urlencoded",
+        "params": [
+          {
+            "id": "pair_b8dfd7cd71654bd48c56abc1335ecb41",
+            "name": "name",
+            "value": "Sample Option",
+            "description": ""
+          },
+          {
+            "id": "pair_992a2ad16023400998c9b251148a4656",
+            "name": "status",
+            "value": "1",
+            "description": ""
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "id": "pair_cfee583975564aaa831810277851e347",
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795280,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_65296ae2bb274faf8d80ee2ef325d74a",
+      "parentId": "wrk_4d066a9fda7a4adfb08f04647b1d4ad4",
+      "modified": 1631215321608,
+      "created": 1631215321608,
+      "name": "Options",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1631215321608,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_4d066a9fda7a4adfb08f04647b1d4ad4",
+      "parentId": null,
+      "modified": 1631195145661,
+      "created": 1631195117855,
+      "name": "Laravel Ecommerce API",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_c80be42015454b7e807681d8939fb547",
+      "parentId": "fld_65296ae2bb274faf8d80ee2ef325d74a",
+      "modified": 1633123145780,
+      "created": 1631215350878,
+      "url": "{{ _.base_url }}options/11",
+      "name": "Options Edit",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/x-www-form-urlencoded",
+        "params": [
+          {
+            "id": "pair_b8dfd7cd71654bd48c56abc1335ecb41",
+            "name": "name",
+            "value": "Wilca",
+            "description": ""
+          },
+          {
+            "id": "pair_992a2ad16023400998c9b251148a4656",
+            "name": "status",
+            "value": "1",
+            "description": ""
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "id": "pair_cfee583975564aaa831810277851e347",
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795230,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_96b6cd689a3c4726bdc53181f4350bdb",
+      "parentId": "fld_65296ae2bb274faf8d80ee2ef325d74a",
+      "modified": 1633123151336,
+      "created": 1631215430479,
+      "url": "{{ _.base_url }}options/3",
+      "name": "Options Single",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631203795217.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f917b93283244e518be1f97f572b6c54",
+      "parentId": "fld_65296ae2bb274faf8d80ee2ef325d74a",
+      "modified": 1633123161518,
+      "created": 1631215445718,
+      "url": "{{ _.base_url }}options",
+      "name": "Options Listing",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631203795205,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5248654856fc471a83a47fd8b09c4e63",
+      "parentId": "fld_65296ae2bb274faf8d80ee2ef325d74a",
+      "modified": 1633123168056,
+      "created": 1631215494104,
+      "url": "{{ _.base_url }}options/101",
+      "name": "Options Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795105,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1ded4e95ffa143ada7bbf6c67c95dd58",
+      "parentId": "fld_65296ae2bb274faf8d80ee2ef325d74a",
+      "modified": 1633123111769,
+      "created": 1631215481764,
+      "url": "{{ _.base_url }}option",
+      "name": "Options Deleted",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795055,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_669759ef05a8446e91d834f505b4b77a",
+      "parentId": "fld_ab441e0e3f7846bbb2daa7edb6d4da6d",
+      "modified": 1633123186107,
+      "created": 1631212190687,
+      "url": "{{ _.base_url }}categories/11",
+      "name": "Categories Edit",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/x-www-form-urlencoded",
+        "params": [
+          {
+            "id": "pair_b8dfd7cd71654bd48c56abc1335ecb41",
+            "name": "name",
+            "value": "Wilca",
+            "description": ""
+          },
+          {
+            "id": "pair_992a2ad16023400998c9b251148a4656",
+            "name": "status",
+            "value": "1",
+            "description": ""
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "id": "pair_cfee583975564aaa831810277851e347",
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795255,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_ab441e0e3f7846bbb2daa7edb6d4da6d",
+      "parentId": "wrk_4d066a9fda7a4adfb08f04647b1d4ad4",
+      "modified": 1631212415999,
+      "created": 1631212415999,
+      "name": "Categories",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1631212415999,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_462c5218963d4ddcbab74bb06fa696f9",
+      "parentId": "fld_ab441e0e3f7846bbb2daa7edb6d4da6d",
+      "modified": 1633123193298,
+      "created": 1631212042834,
+      "url": "{{ _.base_url }}categories",
+      "name": "Categories Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/x-www-form-urlencoded",
+        "params": [
+          {
+            "id": "pair_b8dfd7cd71654bd48c56abc1335ecb41",
+            "name": "name",
+            "value": "Wilco",
+            "description": ""
+          },
+          {
+            "id": "pair_992a2ad16023400998c9b251148a4656",
+            "name": "status",
+            "value": "1",
+            "description": ""
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "id": "pair_cfee583975564aaa831810277851e347",
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795205,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5f321bf22a9c476dab3fb42d25eee7be",
+      "parentId": "fld_ab441e0e3f7846bbb2daa7edb6d4da6d",
+      "modified": 1633123201763,
+      "created": 1631212000227,
+      "url": "{{ _.base_url }}categories/subcategories/data",
+      "name": "Categories Single",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631203795155,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_199d316f38b149378004d2769b419175",
+      "parentId": "fld_ab441e0e3f7846bbb2daa7edb6d4da6d",
+      "modified": 1633123209115,
+      "created": 1631212466663,
+      "url": "{{ _.base_url }}categories/deleted/data",
+      "name": "Categories Deleted",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795130,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_aa5bab6d1c4a4c98bc33fbb46b223cff",
+      "parentId": "fld_ab441e0e3f7846bbb2daa7edb6d4da6d",
+      "modified": 1633123214516,
+      "created": 1631208866949,
+      "url": "{{ _.base_url }}categories",
+      "name": "Categories Listing",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631203795105,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_914635b40bb242c5a6193a9b6dcdd559",
+      "parentId": "fld_ab441e0e3f7846bbb2daa7edb6d4da6d",
+      "modified": 1633123237558,
+      "created": 1631212346121,
+      "url": "{{ _.base_url }}categories/1",
+      "name": "Categories Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795055,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_25c8e194fed74eecbbc51ead8eca5a55",
+      "parentId": "fld_5e572e30ba1d4f21a6c1188c5ccb3e51",
+      "modified": 1633123261407,
+      "created": 1631469731580,
+      "url": "{{ _.base_url }}subcategories/",
+      "name": "SubCategories Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/x-www-form-urlencoded",
+        "params": [
+          {
+            "id": "pair_b8dfd7cd71654bd48c56abc1335ecb41",
+            "name": "name",
+            "value": "Sample Subcategory",
+            "description": ""
+          },
+          {
+            "id": "pair_992a2ad16023400998c9b251148a4656",
+            "name": "status",
+            "value": "1",
+            "description": ""
+          },
+          {
+            "id": "pair_9c2c8a3068f84ceaa5a5989d02fa6616",
+            "name": "category_id",
+            "value": "13",
+            "description": ""
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "id": "pair_cfee583975564aaa831810277851e347",
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795280,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_5e572e30ba1d4f21a6c1188c5ccb3e51",
+      "parentId": "wrk_4d066a9fda7a4adfb08f04647b1d4ad4",
+      "modified": 1631469745795,
+      "created": 1631469731573,
+      "name": "SubCategories",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1631203795055,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_daa41f4fe86045cbad4cbcc5f78fdfb1",
+      "parentId": "fld_5e572e30ba1d4f21a6c1188c5ccb3e51",
+      "modified": 1633123269794,
+      "created": 1631469731577,
+      "url": "{{ _.base_url }}subcategories/11",
+      "name": "SubCategories  Edit",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/x-www-form-urlencoded",
+        "params": [
+          {
+            "id": "pair_b8dfd7cd71654bd48c56abc1335ecb41",
+            "name": "name",
+            "value": "Wilca",
+            "description": ""
+          },
+          {
+            "id": "pair_992a2ad16023400998c9b251148a4656",
+            "name": "status",
+            "value": "1",
+            "description": ""
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "id": "pair_cfee583975564aaa831810277851e347",
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795230,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_29bb57785bd9497e933b4376fb21ff2a",
+      "parentId": "fld_5e572e30ba1d4f21a6c1188c5ccb3e51",
+      "modified": 1633123275416,
+      "created": 1631469731583,
+      "url": "{{ _.base_url }}subcategories/10",
+      "name": "SubCategories  Single",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631203795217.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9b67b65372a942a28a1a33ce741029f0",
+      "parentId": "fld_5e572e30ba1d4f21a6c1188c5ccb3e51",
+      "modified": 1633123283007,
+      "created": 1631469731587,
+      "url": "{{ _.base_url }}subcategories",
+      "name": "SubCategories  Listing",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631203795205,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9d83415714d2407db72e15383f43dc44",
+      "parentId": "fld_5e572e30ba1d4f21a6c1188c5ccb3e51",
+      "modified": 1633123288456,
+      "created": 1631469731595,
+      "url": "{{ _.base_url }}subcategories/101",
+      "name": "SubCategories Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795105,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_67d172807908495aa551f2bf9b511706",
+      "parentId": "fld_5e572e30ba1d4f21a6c1188c5ccb3e51",
+      "modified": 1633123300160,
+      "created": 1631469731593,
+      "url": "{{ _.base_url }}subcategories/deleted/data?page=3",
+      "name": "SubCategories Deleted",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795055,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_08e0565e6c7f454c98ff04d9f4f1c40e",
+      "parentId": "fld_c8cf5fa038af4e238b59e38c5471b89b",
+      "modified": 1633471178413,
+      "created": 1631816884787,
+      "url": "{{ _.base_url }}products/",
+      "name": "Products Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "id": "pair_b8dfd7cd71654bd48c56abc1335ecb41",
+            "name": "name",
+            "value": "Sample Product 3",
+            "description": ""
+          },
+          {
+            "id": "pair_9c2c8a3068f84ceaa5a5989d02fa6616",
+            "name": "price",
+            "value": "300",
+            "description": ""
+          },
+          {
+            "id": "pair_992a2ad16023400998c9b251148a4656",
+            "name": "weight",
+            "value": "1.1",
+            "description": ""
+          },
+          {
+            "id": "pair_a24bfc9ac53143cc88326c756179b12d",
+            "name": "unit",
+            "value": "4",
+            "description": ""
+          },
+          {
+            "id": "pair_c1d6399e0ac443d4b6cd9aadb4e6647c",
+            "name": "description",
+            "value": "This is a sample product 3",
+            "description": ""
+          },
+          {
+            "id": "pair_3f92a21323264699bfbfacc51106c2cf",
+            "name": "stock",
+            "value": "133",
+            "description": ""
+          },
+          {
+            "id": "pair_30e4dbdb748641a6889c2199ce789aa5",
+            "name": "images[]",
+            "value": "",
+            "description": "",
+            "type": "file",
+            "fileName": "C:\\Users\\ARM\\Pictures\\Ecommerce API Data\\T-shirt\\t1.png",
+            "disabled": false
+          },
+          {
+            "id": "pair_64913b55e81041d6a7fcd42f4a30eeab",
+            "name": "images[]",
+            "value": "",
+            "description": "",
+            "type": "file",
+            "fileName": "C:\\Users\\ARM\\Pictures\\Ecommerce API Data\\T-shirt\\t2.png"
+          },
+          {
+            "id": "pair_5f4c816c6478452a9901445ad244bd40",
+            "name": "images[]",
+            "value": "",
+            "description": "",
+            "type": "file",
+            "fileName": "C:\\Users\\ARM\\Pictures\\Ecommerce API Data\\T-shirt\\t3.png"
+          },
+          {
+            "id": "pair_6ce5bda230f344dca29b666c23ee2cea",
+            "name": "categories[]",
+            "value": "1",
+            "description": ""
+          },
+          {
+            "id": "pair_e295769e88e84c9f9bfa0fc62f0c95b1",
+            "name": "categories[]",
+            "value": "3",
+            "description": ""
+          },
+          {
+            "id": "pair_da4fbd3633ed44a5a92cd81809b2893f",
+            "name": "categories[]",
+            "value": "8",
+            "description": ""
+          },
+          {
+            "id": "pair_8e57ec365a0c449db7d05bea24d16b80",
+            "name": "subcategories[]",
+            "value": "3",
+            "description": ""
+          },
+          {
+            "id": "pair_316a4adc60e645218a41b4c3ed9a1647",
+            "name": "subcategories[]",
+            "value": "7",
+            "description": ""
+          },
+          {
+            "id": "pair_a71ec7712e5f47ea9dc8e1cd2b0f95ee",
+            "name": "status",
+            "value": "1",
+            "description": ""
+          },
+          {
+            "id": "pair_925cee6098bc487f82dc6bdbd48537d6",
+            "name": "tags[]",
+            "value": "Tshirts",
+            "description": ""
+          },
+          {
+            "id": "pair_83c87fea68b549688a1d848a7ec1ff30",
+            "name": "tags[]",
+            "value": "men",
+            "description": ""
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "id": "pair_cfee583975564aaa831810277851e347",
+          "name": "Content-Type",
+          "value": "multipart/form-data",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795280,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_c8cf5fa038af4e238b59e38c5471b89b",
+      "parentId": "wrk_4d066a9fda7a4adfb08f04647b1d4ad4",
+      "modified": 1632944405907,
+      "created": 1631816884762,
+      "name": "Products",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": {},
+      "metaSortKey": -1631203795005,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_4c9a54cab18c425e9a79b0639898a201",
+      "parentId": "fld_c8cf5fa038af4e238b59e38c5471b89b",
+      "modified": 1633123367974,
+      "created": 1631816884775,
+      "url": "{{ _.base_url }}products/11",
+      "name": "Products Edit",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/x-www-form-urlencoded",
+        "params": [
+          {
+            "id": "pair_b8dfd7cd71654bd48c56abc1335ecb41",
+            "name": "name",
+            "value": "Wilca",
+            "description": ""
+          },
+          {
+            "id": "pair_992a2ad16023400998c9b251148a4656",
+            "name": "status",
+            "value": "1",
+            "description": ""
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "id": "pair_cfee583975564aaa831810277851e347",
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795230,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6d35f9930c1940cd83c5c7ca2f60ab9f",
+      "parentId": "fld_c8cf5fa038af4e238b59e38c5471b89b",
+      "modified": 1633123351663,
+      "created": 1631816884795,
+      "url": "{{ _.base_url }}products/1",
+      "name": "Products Single",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631203795217.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_cfd8cbdd612846139dfa8d3beae13262",
+      "parentId": "fld_c8cf5fa038af4e238b59e38c5471b89b",
+      "modified": 1633128412340,
+      "created": 1631816884805,
+      "url": "{{ _.base_url }}products",
+      "name": "Products Listing",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631203795205,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f05012315da3496cacd72d2e7654d386",
+      "parentId": "fld_c8cf5fa038af4e238b59e38c5471b89b",
+      "modified": 1633470547762,
+      "created": 1631816884818,
+      "url": "{{ _.base_url }}products/1",
+      "name": "Products Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795105,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_33799024782244ae8f301e278bf52402",
+      "parentId": "fld_c8cf5fa038af4e238b59e38c5471b89b",
+      "modified": 1633123422094,
+      "created": 1631816884811,
+      "url": "{{ _.base_url }}products/deleted/data",
+      "name": "Products Deleted",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795055,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_23b0fd6d5c314c3ea3fcb3e15fb77997",
+      "parentId": "fld_5f245fcf46604686ac3d26a9ee9754cb",
+      "modified": 1633472856149,
+      "created": 1633472808098,
+      "url": "{{ _.base_url }}orders/",
+      "name": "Order Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "id": "pair_b8dfd7cd71654bd48c56abc1335ecb41",
+            "name": "name",
+            "value": "Sample Product 3",
+            "description": ""
+          },
+          {
+            "id": "pair_9c2c8a3068f84ceaa5a5989d02fa6616",
+            "name": "price",
+            "value": "300",
+            "description": ""
+          },
+          {
+            "id": "pair_992a2ad16023400998c9b251148a4656",
+            "name": "weight",
+            "value": "1.1",
+            "description": ""
+          },
+          {
+            "id": "pair_a24bfc9ac53143cc88326c756179b12d",
+            "name": "unit",
+            "value": "4",
+            "description": ""
+          },
+          {
+            "id": "pair_c1d6399e0ac443d4b6cd9aadb4e6647c",
+            "name": "description",
+            "value": "This is a sample product 3",
+            "description": ""
+          },
+          {
+            "id": "pair_3f92a21323264699bfbfacc51106c2cf",
+            "name": "stock",
+            "value": "133",
+            "description": ""
+          },
+          {
+            "id": "pair_30e4dbdb748641a6889c2199ce789aa5",
+            "name": "images[]",
+            "value": "",
+            "description": "",
+            "type": "file",
+            "fileName": "C:\\Users\\ARM\\Pictures\\Ecommerce API Data\\T-shirt\\t1.png",
+            "disabled": false
+          },
+          {
+            "id": "pair_64913b55e81041d6a7fcd42f4a30eeab",
+            "name": "images[]",
+            "value": "",
+            "description": "",
+            "type": "file",
+            "fileName": "C:\\Users\\ARM\\Pictures\\Ecommerce API Data\\T-shirt\\t2.png"
+          },
+          {
+            "id": "pair_5f4c816c6478452a9901445ad244bd40",
+            "name": "images[]",
+            "value": "",
+            "description": "",
+            "type": "file",
+            "fileName": "C:\\Users\\ARM\\Pictures\\Ecommerce API Data\\T-shirt\\t3.png"
+          },
+          {
+            "id": "pair_6ce5bda230f344dca29b666c23ee2cea",
+            "name": "categories[]",
+            "value": "1",
+            "description": ""
+          },
+          {
+            "id": "pair_e295769e88e84c9f9bfa0fc62f0c95b1",
+            "name": "categories[]",
+            "value": "3",
+            "description": ""
+          },
+          {
+            "id": "pair_da4fbd3633ed44a5a92cd81809b2893f",
+            "name": "categories[]",
+            "value": "8",
+            "description": ""
+          },
+          {
+            "id": "pair_8e57ec365a0c449db7d05bea24d16b80",
+            "name": "subcategories[]",
+            "value": "3",
+            "description": ""
+          },
+          {
+            "id": "pair_316a4adc60e645218a41b4c3ed9a1647",
+            "name": "subcategories[]",
+            "value": "7",
+            "description": ""
+          },
+          {
+            "id": "pair_a71ec7712e5f47ea9dc8e1cd2b0f95ee",
+            "name": "status",
+            "value": "1",
+            "description": ""
+          },
+          {
+            "id": "pair_925cee6098bc487f82dc6bdbd48537d6",
+            "name": "tags[]",
+            "value": "Tshirts",
+            "description": ""
+          },
+          {
+            "id": "pair_83c87fea68b549688a1d848a7ec1ff30",
+            "name": "tags[]",
+            "value": "men",
+            "description": ""
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "id": "pair_cfee583975564aaa831810277851e347",
+          "name": "Content-Type",
+          "value": "multipart/form-data",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795280,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_5f245fcf46604686ac3d26a9ee9754cb",
+      "parentId": "wrk_4d066a9fda7a4adfb08f04647b1d4ad4",
+      "modified": 1633472808092,
+      "created": 1633472808092,
+      "name": "Orders",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": {},
+      "metaSortKey": -1631203794980,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_007356c13d824270b4afaa351900899c",
+      "parentId": "fld_5f245fcf46604686ac3d26a9ee9754cb",
+      "modified": 1633472943257,
+      "created": 1633472808095,
+      "url": "{{ _.base_url }}orders/11",
+      "name": "Order Edit",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/x-www-form-urlencoded",
+        "params": [
+          {
+            "id": "pair_b8dfd7cd71654bd48c56abc1335ecb41",
+            "name": "name",
+            "value": "Wilca",
+            "description": ""
+          },
+          {
+            "id": "pair_992a2ad16023400998c9b251148a4656",
+            "name": "status",
+            "value": "1",
+            "description": ""
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "id": "pair_cfee583975564aaa831810277851e347",
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795230,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c7445cfc774846f0b72191f306e64369",
+      "parentId": "fld_5f245fcf46604686ac3d26a9ee9754cb",
+      "modified": 1633472946734,
+      "created": 1633472808101,
+      "url": "{{ _.base_url }}orders/1",
+      "name": "Orders Single",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631203795217.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e9f32e21d1c540a3a8d67e3b97c5c3c3",
+      "parentId": "fld_5f245fcf46604686ac3d26a9ee9754cb",
+      "modified": 1633472950582,
+      "created": 1633472808103,
+      "url": "{{ _.base_url }}orders",
+      "name": "Orders Listing",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631203795205,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_58e8b9226d4347f7a0149ae2b3337a19",
+      "parentId": "fld_5f245fcf46604686ac3d26a9ee9754cb",
+      "modified": 1633472955489,
+      "created": 1633472808107,
+      "url": "{{ _.base_url }}orders/1",
+      "name": "Orders Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795105,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_61b7ff66e2894a959229b02f6293a57e",
+      "parentId": "fld_5f245fcf46604686ac3d26a9ee9754cb",
+      "modified": 1633472959410,
+      "created": 1633472808105,
+      "url": "{{ _.base_url }}orders/deleted/data",
+      "name": "Orders Deleted",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795055,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9a0b4c3afd13457ba04c92ecf10106a3",
+      "parentId": "fld_2b720d2415da4d71a522eb4d28c54a9c",
+      "modified": 1633470581909,
+      "created": 1633126419863,
+      "url": "{{ _.base_url }}tags",
+      "name": "Tags Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "id": "pair_b8dfd7cd71654bd48c56abc1335ecb41",
+            "name": "name",
+            "value": "tshirts",
+            "description": ""
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "id": "pair_cfee583975564aaa831810277851e347",
+          "name": "Content-Type",
+          "value": "multipart/form-data",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795280,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_2b720d2415da4d71a522eb4d28c54a9c",
+      "parentId": "wrk_4d066a9fda7a4adfb08f04647b1d4ad4",
+      "modified": 1633126419853,
+      "created": 1633126419853,
+      "name": "Tags",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": {},
+      "metaSortKey": -1631203794955,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_c84460cc89c448f1ae6e9d350144fe95",
+      "parentId": "fld_2b720d2415da4d71a522eb4d28c54a9c",
+      "modified": 1633127478503,
+      "created": 1633126419858,
+      "url": "{{ _.base_url }}tags/13",
+      "name": "Tags Edit",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/x-www-form-urlencoded",
+        "params": [
+          {
+            "id": "pair_b8dfd7cd71654bd48c56abc1335ecb41",
+            "name": "name",
+            "value": "Gaming",
+            "description": ""
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "id": "pair_cfee583975564aaa831810277851e347",
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795230,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c0e2b37826584699aaf3b31d3a654e33",
+      "parentId": "fld_2b720d2415da4d71a522eb4d28c54a9c",
+      "modified": 1633127606108,
+      "created": 1633126419865,
+      "url": "{{ _.base_url }}tags/2",
+      "name": "Tags Single",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631203795217.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_917fc6217d764d31846d90e74462cbc7",
+      "parentId": "fld_2b720d2415da4d71a522eb4d28c54a9c",
+      "modified": 1633126673645,
+      "created": 1633126419867,
+      "url": "{{ _.base_url }}tags",
+      "name": "Tags Listing",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631203795205,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_89b1a424cc75428ba7886319453cd23c",
+      "parentId": "fld_2b720d2415da4d71a522eb4d28c54a9c",
+      "modified": 1633126687007,
+      "created": 1633126419872,
+      "url": "{{ _.base_url }}tags/1",
+      "name": "Tags Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.bearer }}"
+      },
+      "metaSortKey": -1631203795105,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_eb746228983445dfb0104a81e983a538",
+      "parentId": "wrk_4d066a9fda7a4adfb08f04647b1d4ad4",
+      "modified": 1633122553222,
+      "created": 1631198527082,
+      "url": "http://localhost/api/v1/register",
+      "name": "Register",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/x-www-form-urlencoded",
+        "params": [
+          {
+            "id": "pair_b8dfd7cd71654bd48c56abc1335ecb41",
+            "name": "name",
+            "value": "Admin",
+            "description": ""
+          },
+          {
+            "id": "pair_064dca0faa664437bab09da55a0b7786",
+            "name": "email",
+            "value": "user@emaple.com",
+            "description": ""
+          },
+          {
+            "id": "pair_b1fb1c551f294d06b8b74c5c8d4196df",
+            "name": "password",
+            "value": "password124",
+            "description": "",
+            "disabled": false
+          },
+          {
+            "id": "pair_c6dec0538f2e400e8011388caf26e51d",
+            "name": "password_confirmation",
+            "value": "password124",
+            "description": ""
+          },
+          {
+            "id": "pair_992a2ad16023400998c9b251148a4656",
+            "name": "admin",
+            "value": "1",
+            "description": ""
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "id": "pair_cfee583975564aaa831810277851e347",
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631195174111,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_777b6f1d15a04ab387b04215cdbc2327",
+      "parentId": "wrk_4d066a9fda7a4adfb08f04647b1d4ad4",
+      "modified": 1633122881841,
+      "created": 1631195411020,
+      "url": "{{ _.base_url }}login",
+      "name": "Login",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/x-www-form-urlencoded",
+        "params": [
+          {
+            "id": "pair_b8dfd7cd71654bd48c56abc1335ecb41",
+            "name": "credentials",
+            "value": "Admin",
+            "description": ""
+          },
+          {
+            "id": "pair_064dca0faa664437bab09da55a0b7786",
+            "name": "email",
+            "value": "rafaymodi@gmail.com",
+            "description": "",
+            "disabled": true
+          },
+          {
+            "id": "pair_b1fb1c551f294d06b8b74c5c8d4196df",
+            "name": "password",
+            "value": "password",
+            "description": "",
+            "disabled": false
+          },
+          {
+            "id": "pair_c6dec0538f2e400e8011388caf26e51d",
+            "name": "password_confirmation",
+            "value": "testuser",
+            "description": "",
+            "disabled": true
+          },
+          {
+            "id": "pair_992a2ad16023400998c9b251148a4656",
+            "name": "",
+            "value": "",
+            "description": ""
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_ed14b9cd01da431fbdee6c95a7f24b14",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "id": "pair_cfee583975564aaa831810277851e347",
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631195174061,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_3125f669c0ebc0aea8b3cd9c6d32d18009e59187",
+      "parentId": "wrk_4d066a9fda7a4adfb08f04647b1d4ad4",
+      "modified": 1633470608559,
+      "created": 1631195117864,
+      "name": "Base Environment",
+      "data": {
+        "scheme": "http",
+        "base_url": "{{ _.scheme }}://{{ _.domain }}{{ _.api_version }}",
+        "domain": "localhost/",
+        "api_version": "api/v1/",
+        "bearer": "2|b3NEES88haCJzfCe6aJz283rODdGBVGN6zLyVIDQ"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "scheme",
+          "base_url",
+          "domain",
+          "api_version",
+          "bearer"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1631195117864,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_3125f669c0ebc0aea8b3cd9c6d32d18009e59187",
+      "parentId": "wrk_4d066a9fda7a4adfb08f04647b1d4ad4",
+      "modified": 1631195117873,
+      "created": 1631195117873,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_948947b8dde54124b696f4aa0836e49e",
+      "parentId": "wrk_4d066a9fda7a4adfb08f04647b1d4ad4",
+      "modified": 1631195117857,
+      "created": 1631195117857,
+      "fileName": "Authentication and Authorization",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}

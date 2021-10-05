@@ -55,7 +55,18 @@ class OrderController extends Controller
     {
         try
         {
-            
+        	 /* @var $data[] */
+        	 $data = $request->validated();
+        	 
+        	 $data['user_id'] = $request->user()->id;
+        	 
+            $order = Order::create($data);
+	 
+					 return response()->json([
+						'order' => $order,
+						'success' => true,
+						'msg' => 'Order was placed'
+					 ], $this->createdStatus);
         }
         catch(Exception $ex)
         {
