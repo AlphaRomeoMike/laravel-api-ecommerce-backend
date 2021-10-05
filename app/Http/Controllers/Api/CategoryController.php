@@ -42,7 +42,6 @@ class CategoryController extends Controller
             /* Return failure response*/
             return response()->json([
               'data'      => [],
-              'count'     => 0,
               'success'   => false,
               'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
             ], $this->responseFailed);
@@ -73,7 +72,6 @@ class CategoryController extends Controller
             /* Return failure response*/
             return response()->json([
               'data'      => [],
-              'count'     => 0,
               'success'   => false,
               'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
             ], $this->responseFailed);
@@ -105,7 +103,6 @@ class CategoryController extends Controller
             /* Return failure response*/
             return response()->json([
               'data'      => [],
-              'count'     => 0,
               'success'   => false,
               'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
             ], $this->responseFailed);
@@ -195,7 +192,6 @@ class CategoryController extends Controller
             /* Return failure response*/
             return response()->json([
               'data'      => [],
-              'count'     => 0,
               'success'   => false,
               'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
             ], $this->responseFailed);
