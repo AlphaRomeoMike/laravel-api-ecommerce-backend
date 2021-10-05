@@ -2,7 +2,8 @@
     
     use App\Http\Controllers\Api\CategoryController;
     use App\Http\Controllers\Api\OptionController;
-    use App\Http\Controllers\Api\ProductController;
+	 use App\Http\Controllers\Api\OrderController;
+	 use App\Http\Controllers\Api\ProductController;
     use App\Http\Controllers\Api\SubCategoryController;
     use App\Http\Controllers\Api\TagController;
     use App\Http\Controllers\Api\UserController;
@@ -42,10 +43,10 @@
         });
         
         /**
-         * @link 'localhost:8000/api/v1/products'
+         * @link 'localhost:8000/api/v1/product'
          * Product Routes - No Middleware
          */
-        Route::prefix('products')->name('products.')->group(function () {
+        Route::prefix('product')->name('product.')->group(function () {
             Route::get('/', [ProductController::class, 'index'])->name('index');
             Route::get('/{id}', [ProductController::class, 'show'])->name('show');
         });
@@ -123,9 +124,9 @@
             Route::post('/', [SubCategoryController::class, 'store'])->name('store');
         });
         
-        Route::prefix('products')->name('products.')->group(function () {
+        Route::prefix('products')->name('product.')->group(function () {
             /**
-             * @link 'localhost:8000/api/v1/products'
+             * @link 'localhost:8000/api/v1/product'
              * @api POST
              */
             Route::post('/', [ProductController::class, 'store'])->name('create');
@@ -139,4 +140,7 @@
     
         /* @link 'localhost:8000/api/v1/tags' */
         Route::apiResource('tags', TagController::class)->except(['index', 'show']);
+        
+        /* @link 'localhost:8000/api/v1/orders */
+			 Route::apiResource('orders', OrderController::class);
     });

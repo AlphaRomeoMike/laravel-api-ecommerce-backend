@@ -92,7 +92,7 @@ class ProductController extends Controller
                     $image_resized = Image::make($image->getRealPath())->resize(500, 500);
                     
                     /** @var $image_resized, save to public path */
-                    $image_resized->save(public_path() . '/product/' . $filename);
+                    $image_resized->save(public_path() . '/storage/product/' . $filename);
                     
                     /** @var $picture, create a new instance of picture */
                     $picture = new Picture();
@@ -262,7 +262,7 @@ class ProductController extends Controller
             return response()->json([
               'data' => $products,
               'success' => true,
-              'msg' => 'Deleted products were retrieved'
+              'msg' => 'Deleted product were retrieved'
             ], $this->successStatus);
         }
         catch(Exception $ex)

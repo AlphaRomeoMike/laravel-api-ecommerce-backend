@@ -68,6 +68,7 @@ class Product extends Model
         'sku',
         'name',
         'weight',
+        'unit',
         'description',
         'stock',
         'status',
@@ -102,5 +103,15 @@ class Product extends Model
     public function subcategories(): BelongsToMany
     {
         return $this->belongsToMany(Category::class, 'product_sub_category', 'product_id', 'sub_category_id');
+    }
+    
+    /**
+     * Relationship between @Product and @\App\Models\Order
+     *
+     * @returns BelongsToMany
+     */
+    public function orders()
+    {
+        $this->belongsToMany(Order::class, 'order_product', 'order_product_id', 'product_id');
     }
 }

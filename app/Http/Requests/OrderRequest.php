@@ -1,36 +1,35 @@
 <?php
-
-namespace App\Http\Requests;
-
-use Illuminate\Foundation\Http\FormRequest;
-
-class OrderRequest extends FormRequest
-{
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-    public function authorize()
-    {
-        return true;
-    }
-
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
-    public function rules()
-    {
-        return [
-            'user_id'   => ['required', 'integer'],
-            'amount'    => ['required', 'numeric'],
-            'address'   => ['required', 'string'],
-            'email'     => ['required', 'email'],
-            'status'    => ['required', 'numeric'],
-            'details'   => ['nullable'],
-            'products'  => ['required', 'array']
-        ];
-    }
-}
+	 
+	 namespace App\Http\Requests;
+	 
+	 use Illuminate\Foundation\Http\FormRequest;
+	 
+	 class OrderRequest extends FormRequest
+	 {
+			/**
+			 * Determine if the user is authorized to make this request.
+			 *
+			 * @return bool
+			 */
+			public function authorize()
+			{
+				 return true;
+			}
+			
+			/**
+			 * Get the validation rules that apply to the request.
+			 *
+			 * @return array
+			 */
+			public function rules()
+			{
+				 return [
+					'amount' 		=> ['required', 'numeric'],
+					'address' 	=> ['required', 'string'],
+					'email' 		=> ['required', 'email'],
+					'status' 		=> ['required', 'numeric'],
+					'details' 	=> ['nullable'],
+					'product' 	=> ['required', 'array']
+				 ];
+			}
+	 }
