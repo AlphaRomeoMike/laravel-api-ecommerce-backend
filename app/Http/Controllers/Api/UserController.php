@@ -56,7 +56,6 @@ class UserController extends Controller
                 /* Return failure response*/
                 return response()->json([
                     'data'      => [],
-                    'count'     => 0,
                     'success'   => false,
                     'msg'       => 'User could not be registered'
                 ], $this->requestFailed);
@@ -67,7 +66,6 @@ class UserController extends Controller
             /* Return exception gracefully */
             return response()->json([
                 'data'      => [],
-                'count'     => 0,
                 'success'   => false,
                 'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
             ], $this->responseFailed);
@@ -114,7 +112,6 @@ class UserController extends Controller
                     /* Passwords do not match */
                     return response()->json([
                       'data'      => [],
-                      'count'     => 0,
                       'success'   => false,
                       'msg'       => 'Passwords do not match ',
                     ], $this->requestFailed);
@@ -125,7 +122,6 @@ class UserController extends Controller
                 /* No such user found */
                 return response()->json([
                   'data'      => [],
-                  'count'     => 0,
                   'success'   => false,
                   'msg'       => 'No such user exists ',
                 ], $this->requestFailed);
@@ -136,7 +132,6 @@ class UserController extends Controller
             /* Return exception gracefully */
             return response()->json([
               'data'      => [],
-              'count'     => 0,
               'success'   => false,
               'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
             ], $this->responseFailed);

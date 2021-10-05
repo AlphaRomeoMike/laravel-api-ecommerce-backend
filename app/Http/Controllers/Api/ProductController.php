@@ -42,7 +42,6 @@ class ProductController extends Controller
             /* Return failure response*/
             return response()->json([
               'data'      => [],
-              'count'     => 0,
               'success'   => false,
               'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
             ], $this->responseFailed);
@@ -141,7 +140,6 @@ class ProductController extends Controller
             /* Return failure response*/
             return response()->json([
               'data'      => [],
-              'count'     => 0,
               'success'   => false,
               'file'      => $ex->getFile(),
               'msg'       => $ex->getMessage() . ' on ' . $ex->getLine(),
@@ -174,7 +172,6 @@ class ProductController extends Controller
             /* Return failure response*/
             return response()->json([
               'data'      => [],
-              'count'     => 0,
               'success'   => false,
               'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
             ], $this->responseFailed);
@@ -211,7 +208,6 @@ class ProductController extends Controller
             /* Return failure response*/
             return response()->json([
               'data'      => [],
-              'count'     => 0,
               'success'   => false,
               'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
             ], $this->responseFailed);
@@ -246,7 +242,6 @@ class ProductController extends Controller
             /* Return failure response*/
             return response()->json([
               'data'      => [],
-              'count'     => 0,
               'success'   => false,
               'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
             ], $this->responseFailed);
@@ -275,7 +270,6 @@ class ProductController extends Controller
             /* Return failure response*/
             return response()->json([
               'data'      => [],
-              'count'     => 0,
               'success'   => false,
               'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
             ], $this->responseFailed);
