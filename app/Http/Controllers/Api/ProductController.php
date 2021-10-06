@@ -29,7 +29,7 @@ class ProductController extends Controller
     {
         try
         {
-            $product = Product::with('pictures', 'categories', 'subcategories')->paginate(20);
+            $product = Product::with('pictures', 'categories', 'subcategories')->paginate();
     
             return response()->json([
               'data' => $product,
@@ -257,7 +257,7 @@ class ProductController extends Controller
     {
         try
         {
-            $products = Product::onlyTrashed();
+            $products = Product::onlyTrashed()->paginate();
     
             return response()->json([
               'data' => $products,

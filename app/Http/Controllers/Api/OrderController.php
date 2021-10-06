@@ -8,6 +8,7 @@ use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\OrderRequest;
 use App\Models\Order;
+use App\Models\Product;
 
 class OrderController extends Controller
 {
@@ -26,7 +27,7 @@ class OrderController extends Controller
     {
         try
         {
-            $orders = Order::paginate();
+            $orders = Order::with('user')->paginate();
 
             return response()->json([
                 'orders'    => $orders,
@@ -55,6 +56,49 @@ class OrderController extends Controller
     {
         try
         {
+            /** 
+             * Get all data except products to 
+             * create an order 
+             */
+            $data = $request->except('products');
+
+            $data['user_id'] = $request->user()->id;
+
+            $products = $request->input('products');
+
+            $order = Order::create([
+                'user_id'   => $data['user_id'],
+                'address'   => $data['address'],
+                'email'     => $data['email'],
+                'status'    => 'RECIEVED',
+                'details'   => $data['details'],
+                'ordered_at'=> now()
+            ]);
+
+            foreach ($products as $product) 
+            {
+                $find = Product::find($product['id']);
+
+                if($find)
+                {
+                    $price = $find->price;
+                
+                    if ($product['quantity'] > $find->stock)
+                    {
+                        return response()->json([
+                            'data'      => [],
+                            'success'   => false,
+                            'msg'       => 'Not enough item in the stock'
+                        ], 422);
+                    }
+
+                    $amount = $price * $product['quantity'];
+
+										$order->order_product()->attach($order->id, [
+											// TODO: Continue working on orders
+										]);
+                }
+            }
             
         }
         catch(Exception $ex)

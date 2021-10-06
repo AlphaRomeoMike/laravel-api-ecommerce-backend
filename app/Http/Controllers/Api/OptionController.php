@@ -184,7 +184,7 @@ class OptionController extends Controller
     {
         try
         {
-            $options = Option::withTrashed()->paginate(50);
+            $options = Option::withTrashed()->paginate();
 
             return response()->json([
               'data' => $options,

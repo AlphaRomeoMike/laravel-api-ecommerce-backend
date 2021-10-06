@@ -24,8 +24,6 @@ class OrderRequest extends FormRequest
     public function rules()
     {
         return [
-            'user_id'   => ['required', 'integer'],
-            'amount'    => ['required', 'numeric'],
             'address'   => ['required', 'string'],
             'email'     => ['required', 'email'],
             'status'    => ['required', 'numeric'],
