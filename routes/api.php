@@ -46,7 +46,8 @@
          * @link 'localhost:8000/api/v1/product'
          * Product Routes - No Middleware
          */
-        Route::prefix('product')->name('product.')->group(function () {
+        Route::prefix('products')->name('product.')->group(function () {
+            Route::get('/tags', [ProductController::class, 'tags'])->name('tags');
             Route::get('/', [ProductController::class, 'index'])->name('index');
             Route::get('/{id}', [ProductController::class, 'show'])->name('show');
         });
