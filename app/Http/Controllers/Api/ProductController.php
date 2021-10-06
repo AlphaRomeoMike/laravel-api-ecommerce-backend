@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\ProductRequest;
+use Exception;
+use Ramsey\Uuid\Uuid;
 use App\Models\Picture;
 use App\Models\Product;
-use Exception;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\ProductRequest;
 use Intervention\Image\Facades\Image;
-use Ramsey\Uuid\Uuid;
 
 class ProductController extends Controller
 {
@@ -73,7 +74,7 @@ class ProductController extends Controller
             {
                 if(!empty($request->input('tags')))
                 {
-                    $product->attachTags($request->input('tags'));
+                    $product->syncTags($request->input('tags'));
                 }
             }
             
@@ -92,7 +93,7 @@ class ProductController extends Controller
                     $image_resized = Image::make($image->getRealPath())->resize(500, 500);
                     
                     /** @var $image_resized, save to public path */
-                    $image_resized->save(public_path() . '/product/' . $filename);
+                    $image_resized->save(public_path() . '/storage/product/' . $filename);
                     
                     /** @var $picture, create a new instance of picture */
                     $picture = new Picture();
@@ -262,7 +263,7 @@ class ProductController extends Controller
             return response()->json([
               'data' => $products,
               'success' => true,
-              'msg' => 'Deleted products were retrieved'
+              'msg' => 'Deleted product were retrieved'
             ], $this->successStatus);
         }
         catch(Exception $ex)
@@ -273,6 +274,42 @@ class ProductController extends Controller
               'success'   => false,
               'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
             ], $this->responseFailed);
+        }
+    }
+
+    /**
+     * Retrieve Products with Tags
+     *
+     * @return JsonResponse
+     */
+    public function tags(Request $request)
+    {
+        $request->validate([
+            'tags'  => ['required', 'array']
+        ]);
+
+        try {
+            if($request->has('tags'))
+            {
+                $tags = $request->input('tags');
+
+                $products = Product::withAllTags($tags)->get();
+                
+                return response()->json([
+                    'data'      => $products,
+                    'success'   => true,
+                    'msg'       => 'Products with tags were retrieved'
+                ], $this->successStatus);
+            }
+        } 
+        catch (\Throwable $ex) 
+        {
+            /* Return failure response*/
+            return response()->json([
+                'data'      => [],
+                'success'   => false,
+                'msg'       => $ex->getMessage() . ' on ' . $ex->getLine()
+              ], $this->responseFailed);
         }
     }
 }
