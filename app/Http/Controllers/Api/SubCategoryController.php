@@ -25,7 +25,7 @@ class SubCategoryController extends Controller
     {
         try
         {
-            $subcategory = SubCategory::with('category')->paginate(50);
+            $subcategory = SubCategory::with('category')->paginate();
     
             return response()->json([
               'data' => $subcategory,
@@ -183,7 +183,7 @@ class SubCategoryController extends Controller
     {
         try
         {
-            $subcategories = SubCategory::withTrashed()->paginate(50);
+            $subcategories = SubCategory::withTrashed()->paginate();
     
             return response()->json([
               'data' => $subcategories,
