@@ -26,7 +26,7 @@ class TagController extends Controller
     {
         try
         {
-            $tags = Tag::paginate(50);
+            $tags = Tag::paginate();
     
             return response()->json([
               'data' => $tags,

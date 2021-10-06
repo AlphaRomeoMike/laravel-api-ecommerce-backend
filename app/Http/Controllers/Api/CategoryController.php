@@ -27,7 +27,7 @@ class CategoryController extends Controller
         try
         {
             /* Return all data paginated */
-            $categories = Category::paginate(20);
+            $categories = Category::paginate();
 
             /* Return successful response */
             return response()->json([
@@ -177,7 +177,7 @@ class CategoryController extends Controller
     {
         try
         {
-            $categories = Category::withTrashed()->paginate(20);
+            $categories = Category::withTrashed()->paginate();
 
             /* Return successful response */
             return response()->json([
@@ -206,7 +206,7 @@ class CategoryController extends Controller
      */
 	public function subcategories() : JsonResponse
 	{
-			$subcategories = Category::with('subcategories')->get();
+			$subcategories = Category::with('subcategories')->paginate();
 
 			return response()->json([
 				'data'      => $subcategories,
